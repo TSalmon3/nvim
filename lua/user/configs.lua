@@ -1,3 +1,6 @@
+
+vim.opt.timeoutlen = 500
+
 vim.opt.fileencoding = 'UTF-8'      -- setting encoding --
 
 vim.opt.number = true               -- show line number

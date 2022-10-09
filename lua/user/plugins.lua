@@ -36,6 +36,8 @@ packer.startup({
 		use("wbthomason/packer.nvim")	-- packer repo
 		
 		use("nvim-lua/plenary.nvim")	-- dependency
+
+		use("folke/tokyonight.nvim")	-- color scheme
 	end
 
 })
