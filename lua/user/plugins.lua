@@ -38,6 +38,8 @@ packer.startup({
 		use("nvim-lua/plenary.nvim")	-- dependency
 
 		use("folke/tokyonight.nvim")	-- color scheme
+
+      	use("nvim-telescope/telescope.nvim") -- telescope repo
 	end
 
 })

@@ -1,10 +1,13 @@
 -- vim.api.nvim_set_keymap('mode', 'key', 'map', 'option') --
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
+--Remap space as leader key
 local map = vim.api.nvim_set_keymap
 local opt = { noremap = true, silent = true }
 local pluginKeys = {}
+
+
+map("", "<Space>", "<Nop>", opt)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 
 -- ESC --
@@ -13,7 +16,7 @@ map("v", "jk", "<ESC>", opt)
 
 
 -- open explore --
-map("n", "<leader>e", "Lex 30<CR>", opt)
+map("n", "<leader>e", ":Lex 30<CR>", opt)
 
 -- window spilt shortcut begin--
 map("n", "s", "", opt)
@@ -34,10 +37,10 @@ map("n", "<C-Right>", ":vertical resize +2<CR>", opt)
 map("n", "<C-Up>", ":resize -2<CR>", opt)
 map("n", "<C-Down>", ":resize +2<CR>", opt)
 
-map("n", "<T-m>", ":vertical resize -2<CR>", opt)
-map("n", "<T-,>", ":vertical resize +2<CR>", opt)
-map("n", "<T-.>", ":resize -2<CR>", opt)
-map("n", "<T-/>", ":resize +2<CR>", opt)
+map("n", "<A-m>", ":vertical resize -2<CR>", opt)
+map("n", "<A-,>", ":vertical resize +2<CR>", opt)
+map("n", "<A-.>", ":resize -2<CR>", opt)
+map("n", "<A-/>", ":resize +2<CR>", opt)
 
 -- navigate buffer --
 map("n", "<S-l>", ":bnext<CR>", opt)
@@ -73,3 +76,8 @@ map("n", "q", "", opt)
 map("n", "q", ":q<CR>", opt)
 map("n", "q!", ":q!<CR>", opt)
 map("n", "Q", ":qa!<CR>", opt)
+
+
+-- telescope --
+map("n", "<A-p>", ":Telescope find_files<CR>", opt)
+map("n", "<A-f>", ":Telescope live_grep<CR>", opt)
