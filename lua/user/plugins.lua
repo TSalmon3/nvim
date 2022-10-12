@@ -36,6 +36,7 @@ packer.startup({
 		use("wbthomason/packer.nvim")	-- packer repo
 		
 		use("nvim-lua/plenary.nvim")	-- dependency
+		use("moll/vim-bbye")			-- dependency
 		use("kyazdani42/nvim-web-devicons") --dependency
 
 		use("folke/tokyonight.nvim")	-- color scheme
@@ -44,7 +45,7 @@ packer.startup({
 
 		use("kyazdani42/nvim-tree.lua") -- nvim-tree repo
 			
-
+		use("akinsho/bufferline.nvim") -- bufferline
 	end
 
 })

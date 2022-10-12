@@ -83,3 +83,13 @@ map("n", "Q", ":qa!<CR>", opt)
 -- telescope --
 map("n", "<A-p>", ":Telescope find_files<CR>", opt)
 map("n", "<A-f>", ":Telescope live_grep<CR>", opt)
+
+-- bufferline --
+-- 1.1 table switch
+map("n", "<C-h>", ":BufferLineCyclePre<CR>", opt)
+map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+-- 1.2 table close
+map("n", "<C-w>", ":Bdelete!<CR>", opt)
+map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
+map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
+map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
