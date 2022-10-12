@@ -45,7 +45,9 @@ packer.startup({
 
 		use("kyazdani42/nvim-tree.lua") -- nvim-tree repo
 			
-		use("akinsho/bufferline.nvim") -- bufferline
+		use("akinsho/bufferline.nvim") -- bufferline repo
+
+		use("akinsho/toggleterm.nvim") -- toggleterm repo
 	end
 
 })
