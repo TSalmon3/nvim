@@ -16,7 +16,9 @@ map("v", "jk", "<ESC>", opt)
 
 
 -- open explore --
-map("n", "<leader>e", ":Lex 30<CR>", opt)
+-- map("n", "<leader>e", ":Lex 30<CR>", opt)
+map("n", "<leader>e", ":NvimTreeToggle<CR>", opt)
+map("n", "<A-e>", ":NvimTreeToggle<CR>", opt)
 
 -- window spilt shortcut begin--
 map("n", "s", "", opt)

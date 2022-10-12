@@ -36,10 +36,15 @@ packer.startup({
 		use("wbthomason/packer.nvim")	-- packer repo
 		
 		use("nvim-lua/plenary.nvim")	-- dependency
+		use("kyazdani42/nvim-web-devicons") --dependency
 
 		use("folke/tokyonight.nvim")	-- color scheme
 
       	use("nvim-telescope/telescope.nvim") -- telescope repo
+
+		use("kyazdani42/nvim-tree.lua") -- nvim-tree repo
+			
+
 	end
 
 })
