@@ -53,6 +53,8 @@ packer.startup({
 
 		use("windwp/nvim-autopairs") -- autopairs repo
 
+		use("lewis6991/gitsigns.nvim") -- gitsigns repo
+
 	end
 
 })
