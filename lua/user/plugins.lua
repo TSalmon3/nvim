@@ -50,6 +50,9 @@ packer.startup({
 		use("akinsho/toggleterm.nvim") -- toggleterm repo
 
 		use("nvim-lualine/lualine.nvim") -- lualine repo
+
+		use("windwp/nvim-autopairs") -- autopairs repo
+
 	end
 
 })

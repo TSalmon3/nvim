@@ -86,13 +86,13 @@ map("n", "<A-f>", ":Telescope live_grep<CR>", opt)
 
 -- bufferline --
 -- 1.1 table switch
-map("n", "<C-h>", ":BufferLineCyclePre<CR>", opt)
-map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<S-j>", ":BufferLineCyclePre<CR>", opt)
+map("n", "<S-l>", ":BufferLineCycleNext<CR>", opt)
 -- 1.2 table close
-map("n", "<C-w>", ":Bdelete!<CR>", opt)
-map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
-map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
-map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
+map("n", "<A-w>", ":Bdelete!<CR>", opt)
+--map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
+--map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
+--map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 
 
 -- toggleterm --
