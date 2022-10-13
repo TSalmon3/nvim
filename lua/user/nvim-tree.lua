@@ -45,21 +45,26 @@ nvim_tree.setup(
 			side = 'left',
 			mappings = {
 				list = {
-					i = {
-						-- page move
-						["<C-j>"] = "move_selection_next",
-						["<C-k>"] = "move_selection_previous",
-						["<Down>"] = "move_selection_next",
-						["<Up>"] = "move_selection_previous",
-						-- history record
-						["<C-n>"] = "cycle_history_next",
-						["<C-p>"] = "cycle_history_prev",
-						-- close window
-						["<C-c>"] = "close",
-						-- preview window scrolling
-						["<C-u>"] = "preview_scrolling_up",
-						["<C-d>"] = "preview_scrolling_down"
-					}
+					-- open file or directory
+					{ key = { "<CR>", "o", "<2-LeftMouse>" }, action = "editor" },
+					-- open file in split window
+					{ key = "v", action = "vsplit" },
+					{ key = "h", action = "split" },
+					-- show hidden file
+					{ key = "i", action = "toggle_custom" }, -- show
+					{ key = ".", action = "toggle_dotfiles" }, -- hide
+
+					-- preview --
+					{ key = "<Tab>", action = "preview" },
+					-- file operation
+					{ key = "<F5>", action = "refresh" },
+					{ key = "c", action = "create" },
+					{ key = "d", action = "remove" },
+					{ key = "r", action = "rename" },
+					{ key = "x", action = "cut" },
+					{ key = "y", action = "copy" },
+					{ key = "p", action = "paste" },
+					{ key = "s", action = "system_open" }
 				}
 			},
 		},

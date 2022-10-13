@@ -48,6 +48,8 @@ packer.startup({
 		use("akinsho/bufferline.nvim") -- bufferline repo
 
 		use("akinsho/toggleterm.nvim") -- toggleterm repo
+
+		use("nvim-lualine/lualine.nvim") -- lualine repo
 	end
 
 })
