@@ -9,3 +9,7 @@ require ("user.toggleterm")
 require ("user.lualine")
 require ("user.autopairs")
 require ("user.gitsigns")
+require ("user.cmp")
+
+
+
