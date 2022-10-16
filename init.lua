@@ -12,5 +12,7 @@ require ("user.gitsigns")
 require ("user.cmp")
 require ("user.lsp")
 require ("user.treesitter")
+require ("user.dashboard")
+require ("user.project")
 
 

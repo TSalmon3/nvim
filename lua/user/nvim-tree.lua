@@ -5,6 +5,12 @@ end
 
 nvim_tree.setup(
 	{
+		update_cwd = true,
+		  update_focused_file = {
+			enable = true,
+			update_cwd = true,
+		  },
+		
 		 renderer = {
 			root_folder_modifier = ":t",
 			icons = {

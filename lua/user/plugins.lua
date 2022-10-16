@@ -79,6 +79,10 @@ packer.startup({
 		}
   		use "p00f/nvim-ts-rainbow"
   		use "nvim-treesitter/playground"
+
+		-- dashboard
+		use "glepnir/dashboard-nvim"
+		use "ahmedkhalf/project.nvim"
 	end
 
 })
