@@ -39,10 +39,10 @@ map("n", "<C-Right>", ":vertical resize +2<CR>", opt)
 map("n", "<C-Up>", ":resize -2<CR>", opt)
 map("n", "<C-Down>", ":resize +2<CR>", opt)
 
-map("n", "<A-m>", ":vertical resize -2<CR>", opt)
-map("n", "<A-,>", ":vertical resize +2<CR>", opt)
-map("n", "<A-.>", ":resize -2<CR>", opt)
-map("n", "<A-/>", ":resize +2<CR>", opt)
+map("n", "<A-n>", ":vertical resize -2<CR>", opt)
+map("n", "<A-.>", ":vertical resize +2<CR>", opt)
+map("n", "<A-m>", ":resize -2<CR>", opt)
+map("n", "<A-,>", ":resize +2<CR>", opt)
 
 -- navigate buffer --
 map("n", "<S-l>", ":bnext<CR>", opt)
