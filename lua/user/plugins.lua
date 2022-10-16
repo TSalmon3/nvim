@@ -18,7 +18,7 @@ end
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
 	vim.notify("not find packer")
-	return 
+	return
 end
 
 
@@ -34,7 +34,7 @@ packer.init({
 packer.startup({
 	function(use)
 		use("wbthomason/packer.nvim")	-- packer repo
-		
+
 		use("nvim-lua/plenary.nvim")	-- dependency
 		use("moll/vim-bbye")			-- dependency
 		use("kyazdani42/nvim-web-devicons") --dependency
