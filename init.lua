@@ -10,6 +10,6 @@ require ("user.lualine")
 require ("user.autopairs")
 require ("user.gitsigns")
 require ("user.cmp")
-
+require ("user.lsp")
 
 
