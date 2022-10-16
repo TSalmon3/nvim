@@ -11,5 +11,6 @@ require ("user.autopairs")
 require ("user.gitsigns")
 require ("user.cmp")
 require ("user.lsp")
+require ("user.treesitter")
 
 

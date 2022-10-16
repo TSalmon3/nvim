@@ -72,6 +72,13 @@ packer.startup({
 		use "neovim/nvim-lspconfig" -- enable LSP
   		use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
+		-- treesitter
+		use {
+			"nvim-treesitter/nvim-treesitter",
+			run = ":TSUpdate",
+		}
+  		use "p00f/nvim-ts-rainbow"
+  		use "nvim-treesitter/playground"
 	end
 
 })
