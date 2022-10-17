@@ -4,7 +4,6 @@ if not status then
 	return
 end
 
-
 toggleterm.setup({
 	size = 20,
 	open_mapping = [[<A-t>]],

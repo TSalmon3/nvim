@@ -4,10 +4,8 @@ if not status then
 	return
 end
 
-
-bufferline.setup(
-	{	
-		options = {
+bufferline.setup({
+	options = {
 		close_command = "Bdelete! %d",
 		right_mouse_command = "Bdelete! %d",
 
@@ -17,7 +15,7 @@ bufferline.setup(
 				text = "File Explorer",
 				highlight = "Directory",
 				text_align = "left",
-			}
+			},
 		},
 		--[[
 		diagnostics = "nvim_lsp",
@@ -30,6 +28,5 @@ bufferline.setup(
 			return s
 		end,
 		]]
-		}
-	}
-)
+	},
+})

@@ -4,16 +4,13 @@ local map = vim.api.nvim_set_keymap
 local opt = { noremap = true, silent = true }
 local pluginKeys = {}
 
-
 map("", "<Space>", "<Nop>", opt)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-
 -- ESC --
 map("i", "jk", "<ESC>", opt)
 map("v", "jk", "<ESC>", opt)
-
 
 -- open explore --
 -- map("n", "<leader>e", ":Lex 30<CR>", opt)
@@ -33,7 +30,7 @@ map("n", "<A-j>", "<C-w>j", opt)
 map("n", "<A-k>", "<C-w>k", opt)
 map("n", "<A-l>", "<C-w>l", opt)
 
--- window resize --	
+-- window resize --
 map("n", "<C-Left>", ":vertical resize -2<CR>", opt)
 map("n", "<C-Right>", ":vertical resize +2<CR>", opt)
 map("n", "<C-Up>", ":resize -2<CR>", opt)
@@ -68,7 +65,6 @@ map("n", "<C-k>", "4k", opt)
 map("n", "<C-d>", "9j", opt)
 map("n", "<C-u>", "9k", opt)
 
-
 -- fast indent --
 map("v", "<", "<gv", opt)
 map("v", ">", ">gv", opt)
@@ -78,7 +74,6 @@ map("n", "q", "", opt)
 map("n", "q", ":q<CR>", opt)
 map("n", "q!", ":q!<CR>", opt)
 map("n", "Q", ":qa!<CR>", opt)
-
 
 -- telescope --
 map("n", "<A-p>", ":Telescope find_files<CR>", opt)
@@ -94,15 +89,17 @@ map("n", "<A-w>", ":Bdelete!<CR>", opt)
 --map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 --map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 
-
 -- toggleterm --
-local opts = {noremap = true}
-vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
-vim.api.nvim_buf_set_keymap(0, 't', 'jk', [[<C-\><C-n>]], opts)
-vim.api.nvim_buf_set_keymap(0, 't', '<A-h>', [[<C-\><C-n><C-W>h]], opts)
-vim.api.nvim_buf_set_keymap(0, 't', '<A-j>', [[<C-\><C-n><C-W>j]], opts)
-vim.api.nvim_buf_set_keymap(0, 't', '<A-k>', [[<C-\><C-n><C-W>k]], opts)
-vim.api.nvim_buf_set_keymap(0, 't', '<A-l>', [[<C-\><C-n><C-W>l]], opts)
+local opts = { noremap = true }
+vim.api.nvim_buf_set_keymap(0, "t", "<esc>", [[<C-\><C-n>]], opts)
+vim.api.nvim_buf_set_keymap(0, "t", "jk", [[<C-\><C-n>]], opts)
+vim.api.nvim_buf_set_keymap(0, "t", "<A-h>", [[<C-\><C-n><C-W>h]], opts)
+vim.api.nvim_buf_set_keymap(0, "t", "<A-j>", [[<C-\><C-n><C-W>j]], opts)
+vim.api.nvim_buf_set_keymap(0, "t", "<A-k>", [[<C-\><C-n><C-W>k]], opts)
+vim.api.nvim_buf_set_keymap(0, "t", "<A-l>", [[<C-\><C-n><C-W>l]], opts)
 
 -- gitsigns --
 map("n", "gb", ":Gitsigns blame_line<CR>", opt)
+
+-- lsp --
+map("n", "<leader>f", ":Format<CR>", opt)

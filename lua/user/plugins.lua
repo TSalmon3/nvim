@@ -21,30 +21,28 @@ if not status_ok then
 	return
 end
 
-
 packer.init({
 	display = {
 		open_fn = function()
-			return require("packer.util").float({ border = "single"})
-		end
-	}
+			return require("packer.util").float({ border = "single" })
+		end,
+	},
 })
-
 
 packer.startup({
 	function(use)
-		use("wbthomason/packer.nvim")	-- packer repo
+		use("wbthomason/packer.nvim") -- packer repo
 
-		use("nvim-lua/plenary.nvim")	-- dependency
-		use("moll/vim-bbye")			-- dependency
+		use("nvim-lua/plenary.nvim") -- dependency
+		use("moll/vim-bbye") -- dependency
 		use("kyazdani42/nvim-web-devicons") --dependency
 
-		use("folke/tokyonight.nvim")	-- color scheme
+		use("folke/tokyonight.nvim") -- color scheme
 
-      	use("nvim-telescope/telescope.nvim") -- telescope repo
+		use("nvim-telescope/telescope.nvim") -- telescope repo
 
 		use("kyazdani42/nvim-tree.lua") -- nvim-tree repo
-			
+
 		use("akinsho/bufferline.nvim") -- bufferline repo
 
 		use("akinsho/toggleterm.nvim") -- toggleterm repo
@@ -56,38 +54,36 @@ packer.startup({
 		use("lewis6991/gitsigns.nvim") -- gitsigns repo
 
 		-- cmp plugins
-		use "hrsh7th/nvim-cmp" -- The completion plugin
-		use "hrsh7th/cmp-buffer" -- buffer completions
-		use "hrsh7th/cmp-path" -- path completions
-		use "hrsh7th/cmp-cmdline" -- cmdline completions
-		use "saadparwaiz1/cmp_luasnip" -- snippet completions
-		use "hrsh7th/cmp-nvim-lsp"
-  		use "hrsh7th/cmp-nvim-lua"
+		use("hrsh7th/nvim-cmp") -- The completion plugin
+		use("hrsh7th/cmp-buffer") -- buffer completions
+		use("hrsh7th/cmp-path") -- path completions
+		use("hrsh7th/cmp-cmdline") -- cmdline completions
+		use("saadparwaiz1/cmp_luasnip") -- snippet completions
+		use("hrsh7th/cmp-nvim-lsp")
+		use("hrsh7th/cmp-nvim-lua")
 
 		-- snippets
-		use "L3MON4D3/LuaSnip" --snippet engine
-		use "rafamadriz/friendly-snippets" -- a bunch of snippets to use	
+		use("L3MON4D3/LuaSnip") --snippet engine
+		use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
 		-- LSP
-		use "neovim/nvim-lspconfig" -- enable LSP
-  		use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+		use("neovim/nvim-lspconfig") -- enable LSP
+		use("williamboman/nvim-lsp-installer") -- simple to use language server installer
+		use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 
 		-- treesitter
-		use {
+		use({
 			"nvim-treesitter/nvim-treesitter",
 			run = ":TSUpdate",
-		}
-  		use "p00f/nvim-ts-rainbow"
-  		use "nvim-treesitter/playground"
+		})
+		use("p00f/nvim-ts-rainbow")
+		use("nvim-treesitter/playground")
 
 		-- dashboard
-		use "glepnir/dashboard-nvim"
-		use "ahmedkhalf/project.nvim"
-	end
-
+		use("glepnir/dashboard-nvim")
+		use("ahmedkhalf/project.nvim")
+	end,
 })
-
-
 
 pcall(
 	vim.cmd,
@@ -98,4 +94,3 @@ pcall(
 		augroup end
 	]]
 )
-

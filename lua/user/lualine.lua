@@ -1,7 +1,7 @@
 local status, lualine = pcall(require, "lualine")
 if not status then
 	vim.notify("not find lualine")
-	return 
+	return
 end
 
 local hide_in_width = function()
@@ -22,7 +22,7 @@ local diff = {
 	"diff",
 	colored = false,
 	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
-  	cond = hide_in_width
+	cond = hide_in_width,
 }
 
 local mode = {
@@ -54,8 +54,8 @@ local fileformat = {
 	symbols = {
 		unix = "LF",
 		dos = "CRLF",
-		mac = "CR"
-	}
+		mac = "CR",
+	},
 }
 
 --[[
@@ -73,31 +73,31 @@ local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
-lualine.setup {
+lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = 'auto',
-		component_separators = { left = '', right = ''},
-    	section_separators = { left = '', right = ''},
+		theme = "auto",
+		component_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
 		always_divide_middle = true,
 	},
 	sections = {
-		lualine_a = {branch, diagnostics},
-		lualine_b = {mode},
+		lualine_a = { branch, diagnostics },
+		lualine_b = { mode },
 		lualine_c = {},
-		lualine_x = {diff, spaces},
+		lualine_x = { diff, spaces },
 		-- lualine_x = {'encoding', 'fileformat', 'filetype'},
-		lualine_y = {'encoding', fileformat, filetype},
-		lualine_z = {location, 'progress'}
+		lualine_y = { "encoding", fileformat, filetype },
+		lualine_z = { location, "progress" },
 	},
 	inactive_sections = {
 		lualine_a = {},
 		lualine_b = {},
-		lualine_c = {'filename'},
-		lualine_x = {'location'},
+		lualine_c = { "filename" },
+		lualine_x = { "location" },
 		lualine_y = {},
-		lualine_z = {}
+		lualine_z = {},
 	},
 	tabline = {},
-	extensions = {}
-}
+	extensions = {},
+})
