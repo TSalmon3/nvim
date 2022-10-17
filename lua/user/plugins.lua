@@ -53,6 +53,16 @@ packer.startup({
 
 		use("lewis6991/gitsigns.nvim") -- gitsigns repo
 
+		use("glepnir/dashboard-nvim") -- dashboard
+		use("ahmedkhalf/project.nvim") -- project
+
+		use("lewis6991/impatient.nvim")
+
+		-- indent
+		use("lukas-reineke/indent-blankline.nvim")
+
+	
+		
 		-- cmp plugins
 		use("hrsh7th/nvim-cmp") -- The completion plugin
 		use("hrsh7th/cmp-buffer") -- buffer completions
@@ -79,13 +89,7 @@ packer.startup({
 		use("p00f/nvim-ts-rainbow")
 		use("nvim-treesitter/playground")
 
-		-- dashboard
-		use("glepnir/dashboard-nvim")
-		use("ahmedkhalf/project.nvim")
-
-		-- indent
-		use("lukas-reineke/indent-blankline.nvim")
-	end,
+		end,
 })
 
 pcall(
