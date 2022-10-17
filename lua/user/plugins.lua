@@ -82,6 +82,9 @@ packer.startup({
 		-- dashboard
 		use("glepnir/dashboard-nvim")
 		use("ahmedkhalf/project.nvim")
+
+		-- indent
+		use("lukas-reineke/indent-blankline.nvim")
 	end,
 })
 
