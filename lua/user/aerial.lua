@@ -1,6 +1,7 @@
 local status, aerial = pcall(require, "aerial")
 if not status then
 	vim.notify("not find aerial")
+	return 
 end
 
 aerial.setup({

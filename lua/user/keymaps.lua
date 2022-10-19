@@ -99,7 +99,7 @@ vim.api.nvim_buf_set_keymap(0, "t", "<A-k>", [[<C-\><C-n><C-W>k]], opts)
 vim.api.nvim_buf_set_keymap(0, "t", "<A-l>", [[<C-\><C-n><C-W>l]], opts)
 
 -- gitsigns --
-map("n", "gb", ":Gitsigns blame_line<CR>", opt)
+map("n", "gs", ":Gitsigns blame_line<CR>", opt)
 
 -- lsp --
 map("n", "<leader>f", ":Format<CR>", opt)
