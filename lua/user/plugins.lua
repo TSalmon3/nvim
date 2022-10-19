@@ -61,6 +61,7 @@ packer.startup({
 		use("lukas-reineke/indent-blankline.nvim") --indent-blankline repo
 		use("stevearc/aerial.nvim") --aerial repo
 		use("goolord/alpha-nvim") --alpha repo
+		use("numToStr/Comment.nvim") --comment repo
 
 		-- cmp plugins
 		use("hrsh7th/nvim-cmp") -- The completion plugin
