@@ -102,4 +102,4 @@ vim.api.nvim_buf_set_keymap(0, "t", "<A-l>", [[<C-\><C-n><C-W>l]], opts)
 map("n", "gs", ":Gitsigns blame_line<CR>", opt)
 
 -- lsp --
-map("n", "<leader>f", ":Format<CR>", opt)
+map("n", "<S-f>", ":Format<CR>", opt)

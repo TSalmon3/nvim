@@ -18,3 +18,4 @@ vim.opt.colorcolumn = "80" -- reference line --
 vim.opt.cursorline = true -- highlight current column --
 
 vim.opt.wrap = false -- don't wrap --
+vim.opt.timeoutlen = 500
