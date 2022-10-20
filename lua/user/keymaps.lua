@@ -103,3 +103,12 @@ map("n", "gs", ":Gitsigns blame_line<CR>", opt)
 
 -- lsp --
 map("n", "<S-f>", ":Format<CR>", opt)
+
+-- motion --
+vim.api.nvim_buf_set_keymap(0, "n", "mw", ":HopWord<CR>", opts)
+vim.api.nvim_buf_set_keymap(0, "n", "mc", ":HopChar1<CR>", opts)
+vim.api.nvim_buf_set_keymap(0, "n", "mC", ":HopChar2<CR>", opts)
+vim.api.nvim_buf_set_keymap(0, "n", "ml", ":HopLineStart<CR>", opts)
+vim.api.nvim_buf_set_keymap(0, "n", "mL", ":HopLine<CR>", opts)
+vim.api.nvim_buf_set_keymap(0, "n", "ma", ":HopAnywhere<CR>", opts)
+
