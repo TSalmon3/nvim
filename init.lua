@@ -20,3 +20,5 @@ require("user.impatient")
 require("user.aerial")
 require("user.comment")
 require("user.which-key")
+require("user.surround")
+
