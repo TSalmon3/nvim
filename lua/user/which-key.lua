@@ -152,10 +152,10 @@ local mappings = {
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
 		D = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "Decaration" },
 		d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
-		h = {"<cmd>lua vim.lsp.buf.hover()<CR>", "Hover"},
-		i = {"<cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation"},
-		R = {"<cmd>lua vim.lsp.buf.references()<CR>", "References"},
-		p = {"<cmd>lua vim.diagnostic.open_float()<CR>", "Float"},
+		h = { "<cmd>lua vim.lsp.buf.hover()<CR>", "Hover" },
+		i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation" },
+		R = { "<cmd>lua vim.lsp.buf.references()<CR>", "References" },
+		p = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Float" },
 		-- d = {
 		-- 	"<cmd>Telescope lsp_document_diagnostics<cr>",
 		-- 	"Document Diagnostics",
@@ -183,6 +183,12 @@ local mappings = {
 			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
 			"Workspace Symbols",
 		},
+	},
+	m = {
+		w = { "<cmd>HopWord<cr>", "MoveWord" },
+		l = { "<cmd>HopLineStart<cr>", "MoveLineStart" },
+		a = { "<cmd>HopAnywhere<cr>", "MoveAnywhere" },
+		L = { "<cmd>HopLine<cr>", "MoveLine" },
 	},
 	s = {
 		name = "Search",
