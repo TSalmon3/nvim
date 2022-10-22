@@ -53,13 +53,13 @@ cmp.setup({
 	},
 
 	mapping = {
-		["<S-k>"] = cmp.mapping.select_prev_item(),
-		["<S-j>"] = cmp.mapping.select_next_item(),
-		["<S-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
-		["<S-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
-		["<S-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+		["ck"] = cmp.mapping.select_prev_item(),
+		["cj"] = cmp.mapping.select_next_item(),
+		["cb"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
+		["cf"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
+		["cp"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 		-- ["<S-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-		["<S-e>"] = cmp.mapping({
+		["cq"] = cmp.mapping({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}),

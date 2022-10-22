@@ -64,7 +64,7 @@ lspsaga.init_lsp_saga({
 		tabe = "<C-c>t",
 		quit = "q",
 	},
-	rename_action_quit = "<C-c>",
+	rename_action_quit = "jk",
 	rename_in_select = true,
 	-- show symbols in winbar must nightly
 	-- in_custom mean use lspsaga api to get symbols

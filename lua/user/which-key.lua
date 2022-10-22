@@ -106,7 +106,7 @@ local mappings = {
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
-	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+	["d"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = {
 		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -114,6 +114,7 @@ local mappings = {
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
+
 
 	p = {
 		name = "Packer",
@@ -149,13 +150,22 @@ local mappings = {
 
 	l = {
 		name = "LSP",
-		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+		-- a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+		-- D = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "Decaration" },
+		-- d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
+		-- h = { "<cmd>lua vim.lsp.buf.hover()<CR>", "Hover" },
+		-- i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation" },
+		-- R = { "<cmd>lua vim.lsp.buf.references()<CR>", "References" },
+		-- p = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Float" },
+
+		a = { "<cmd>Lspsaga code_action<CR>", "Code Action" },
 		D = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "Decaration" },
-		d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
-		h = { "<cmd>lua vim.lsp.buf.hover()<CR>", "Hover" },
+		d = { "<cmd>Lspsaga peek_definition<CR>", "Definition" },
+		h = { "<cmd>Lspsaga hover_doc<CR>", "Hover" },
 		i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation" },
 		R = { "<cmd>lua vim.lsp.buf.references()<CR>", "References" },
-		p = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Float" },
+		p = { "<cmd>Lspsaga show_line_diagnostics<CR>", "Float" },
+
 		-- d = {
 		-- 	"<cmd>Telescope lsp_document_diagnostics<cr>",
 		-- 	"Document Diagnostics",
@@ -167,12 +177,20 @@ local mappings = {
 		f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
 		I = { "<cmd>LspInfo<cr>", "Info" },
 		-- I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+		-- j = {
+		-- 	"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
+		-- 	"Next Diagnostic",
+		-- },
+		-- k = {
+		-- 	"<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
+		-- 	"Prev Diagnostic",
+		-- },
 		j = {
-			"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
+			"<cmd>Lspsaga diagnostic_jump_next<CR>",
 			"Next Diagnostic",
 		},
 		k = {
-			"<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
+			"<cmd>Lspsaga diagnostic_jump_prev<cr>",
 			"Prev Diagnostic",
 		},
 		l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
@@ -185,10 +203,12 @@ local mappings = {
 		},
 	},
 	m = {
-		w = { "<cmd>HopWord<cr>", "MoveWord" },
-		l = { "<cmd>HopLineStart<cr>", "MoveLineStart" },
-		a = { "<cmd>HopAnywhere<cr>", "MoveAnywhere" },
-		L = { "<cmd>HopLine<cr>", "MoveLine" },
+		w = { "<cmd>HopWord<cr>", "Jump 2 Word" },
+		c = { "<cmd>HopChar1<cr>", "Jump 2 Char1" },
+		C = { "<cmd>HopChar2<cr>", "Jump 2 Char2" },
+		l = { "<cmd>HopLineStart<cr>", "Jump 2 Line Start" },
+		a = { "<cmd>HopAnywhere<cr>", "Jump 2 Anywhere" },
+		L = { "<cmd>HopLine<cr>", "Jump 2 Line" },
 	},
 	s = {
 		name = "Search",
