@@ -114,3 +114,8 @@ map("n", "ml", ":HopLineStart<CR>", opts)
 map("n", "mL", ":HopLine<CR>", opts)
 map("n", "ma", ":HopAnywhere<CR>", opts)
 
+-- trouble --
+map("n", "tt", "<cmd>TroubleToggle<cr>", opts)
+map("n", "tw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
+map("n", "td", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
+map("n", "tr", "<cmd>TroubleRefresh<cr>", opts)
