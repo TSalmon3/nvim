@@ -1,10 +1,12 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
+	vim.notify("not find cmp")
 	return
 end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
+	vim.notify("not find luasnip")
 	return
 end
 
@@ -45,6 +47,7 @@ local kind_icons = {
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
+
 cmp.setup({
 	snippet = {
 		expand = function(args)
@@ -53,13 +56,13 @@ cmp.setup({
 	},
 
 	mapping = {
-		["ck"] = cmp.mapping.select_prev_item(),
-		["cj"] = cmp.mapping.select_next_item(),
-		["cb"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
-		["cf"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
-		["cp"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+		["<S-k>"] = cmp.mapping.select_prev_item(),
+		["<S-j>"] = cmp.mapping.select_next_item(),
+		["<S-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
+		["<S-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
+		["<S-c>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 		-- ["<S-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-		["cq"] = cmp.mapping({
+		["<S-q>"] = cmp.mapping({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}),

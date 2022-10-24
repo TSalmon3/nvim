@@ -2,7 +2,6 @@
 --Remap space as leader key
 local map = vim.api.nvim_set_keymap
 local opt = { noremap = true, silent = true }
-local pluginKeys = {}
 
 map("", "<Space>", "<Nop>", opt)
 vim.g.mapleader = " "
@@ -81,7 +80,7 @@ map("n", "<A-f>", ":Telescope live_grep<CR>", opt)
 
 -- bufferline --
 -- 1.1 table switch
-map("n", "<S-j>", ":BufferLineCyclePre<CR>", opt)
+map("n", "<S-h>", ":BufferLineCyclePre<CR>", opt)
 map("n", "<S-l>", ":BufferLineCycleNext<CR>", opt)
 -- 1.2 table close
 map("n", "<A-w>", ":Bdelete!<CR>", opt)
