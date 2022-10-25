@@ -90,7 +90,7 @@ packer.startup({
 		use("folke/trouble.nvim")
 
 		-- DAP
-		use("mfussenegger/nvim-dap.nvim")
+		-- use("mfussenegger/nvim-dap.nvim")
 
 		-- treesitter
 		use({
@@ -99,6 +99,9 @@ packer.startup({
 		})
 		use("p00f/nvim-ts-rainbow")
 		use("nvim-treesitter/playground")
+		
+		-- todo list
+		use("folke/todo-comments.nvim")
 	end,
 })
 

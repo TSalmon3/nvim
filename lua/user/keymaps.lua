@@ -118,3 +118,12 @@ map("n", "tt", "<cmd>TroubleToggle<cr>", opts)
 map("n", "tw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
 map("n", "td", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
 map("n", "tr", "<cmd>TroubleRefresh<cr>", opts)
+
+-- todo --
+vim.keymap.set("n", "]t", function()
+  require("todo-comments").jump_next()
+end, { desc = "Next todo comment" })
+
+vim.keymap.set("n", "[t", function()
+  require("todo-comments").jump_prev()
+end, { desc = "Previous todo comment" })

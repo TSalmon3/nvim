@@ -22,4 +22,4 @@ require("user.comment")
 require("user.which-key")
 require("user.surround")
 require("user.motion")
-
+require("user.todo")
