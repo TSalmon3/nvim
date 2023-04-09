@@ -1,0 +1,12 @@
+require("core.options")
+require("core.keymaps")
+require("core.plugin")
+
+-- require("plugins.plugins-setup")
+-- require("plugins.lualine")
+-- require("plugins.bufferline")
+-- require("plugins.nvim-tree")
+-- require("plugins.telescope")
+-- require("plugins.nvim-autopairs")
+-- require("plugins.gitsigns")
+-- require("plugins.dashboard")
