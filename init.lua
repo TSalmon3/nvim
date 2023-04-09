@@ -1,6 +1,6 @@
-require("core.options")
+require("core.setting")
 require("core.keymaps")
-require("core.plugin")
+require("core.plugins")
 
 -- require("plugins.plugins-setup")
 -- require("plugins.lualine")
