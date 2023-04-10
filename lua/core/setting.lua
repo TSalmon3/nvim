@@ -34,4 +34,3 @@ set.termguicolors = true
 set.signcolumn = "yes"
 
 
--- vim.cmd[[colorscheme tokyonight-moon]]
