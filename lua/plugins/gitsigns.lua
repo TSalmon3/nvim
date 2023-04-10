@@ -1,12 +1,8 @@
-local status, gitsigns = pcall(require, "gitsigns")
-if not status then
-	vim.notify("not find gitsign")
-	return
-end
-
-
-gitsigns.setup {
- signs = {
+return {
+  'lewis6991/gitsigns.nvim',
+  config = function()
+    require('gitsigns').setup({
+            signs = {
 		add = { hl = "GitSignsAdd", text = "▎", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
 		change = { hl = "GitSignsChange", text = "▎", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
 		delete = { hl = "GitSignsDelete", text = "契", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
@@ -44,5 +40,7 @@ gitsigns.setup {
 	},
 	yadm = {
 		enable = false,
-	}, 
+	},
+    })
+  end
 }
