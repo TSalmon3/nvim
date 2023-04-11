@@ -8,6 +8,7 @@ vim.opt.termguicolors = true
 
 return {
   "nvim-tree/nvim-tree.lua",
+  enalbed = true,
   version = "*",
   dependencies = {
     "nvim-tree/nvim-web-devicons",
@@ -15,11 +16,9 @@ return {
   config = function()
     require("nvim-tree").setup({
         update_cwd = true,
-	update_focused_file = {
-		enable = true,
-		update_cwd = true,
-	},
+        root_dirs = {}
 
     })
   end,
 }
+

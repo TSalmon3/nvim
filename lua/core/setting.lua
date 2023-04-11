@@ -1,36 +1,39 @@
 
-local set = vim.opt
-
 -- 行号
-set.relativenumber = true
-set.number = true
+vim.opt.relativenumber = true
+vim.opt.number = true
+
+-- 备份
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.swapfile = false
 
 -- 缩进
-set.tabstop = 8
-set.shiftwidth = 8
-set.expandtab = true
-set.autoindent = true
+vim.opt.tabstop = 8
+vim.opt.shiftwidth = 8
+vim.opt.expandtab = true
+vim.opt.autoindent = true
 
 
 -- 光标行
-set.cursorline = true
+vim.opt.cursorline = true
 
 -- 启用鼠标
-set.mouse:append("a")
+vim.opt.mouse:append("a")
 
 -- 系统剪切板
-set.clipboard:append("unnamedplus")
+vim.opt.clipboard:append("unnamedplus")
 
 -- 默认新窗口右和下
-set.splitright = true
-set.splitbelow = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
 -- 搜索
-set.ignorecase = true
-set.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- 外观
-set.termguicolors = true
-set.signcolumn = "yes"
+vim.opt.termguicolors = true
+vim.opt.signcolumn = "yes"
 
 
