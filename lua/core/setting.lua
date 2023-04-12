@@ -37,3 +37,4 @@ vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 
 
+vim.cmd[[set shell=powershell]]
