@@ -2,7 +2,6 @@ return {
         -- nvim lspconfig (official)
         {
                 "neovim/nvim-lspconfig",
-
         },
 
 
@@ -20,7 +19,7 @@ return {
                                         }
                                 }
                         })
-                end
+                end,
         },
 
         -- mason-lspconfig --
@@ -43,7 +42,7 @@ return {
                                 -- and will be called for each installed server that doesn't have
                                 -- a dedicated handler.
                                 function (server_name) -- default handler (optional)
-                                        require("lspconfig")[server_name].setup()
+                                        require("lspconfig")[server_name].setup{}
                                 end,
                                 -- Next, you can provide targeted overrides for specific servers.
                                 ["lua_ls"] = function ()

@@ -8,12 +8,12 @@ return {
                                 globals = { "vim" }
                         },
                         workspace = {
-				library = {
-					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-					[vim.fn.stdpath("config") .. "/lua"] = true,
-			--		[vim.fn.stdpath("data") .. "/site/pack/packer/start"] = true,
-				},
-			},
+                                library = {
+                                        [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                                        [vim.fn.stdpath("config") .. "/lua"] = true,
+                                        [vim.fn.stdpath("data") .. "lazy"] = true,
+                                },
+                        },
                 }
         }
 }
