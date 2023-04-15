@@ -1,10 +1,10 @@
 return {
-        'glepnir/dashboard-nvim',
-        dependencies = { {'nvim-tree/nvim-web-devicons'}},
-        event = 'VimEnter',
-        opts =  {
+        "glepnir/dashboard-nvim",
+        dependencies = { { "nvim-tree/nvim-web-devicons" } },
+        event = "VimEnter",
+        opts = {
                 -- config
-                theme = 'doom',
+                theme = "doom",
                 config = {
                         header = {
                                 [[]],
@@ -41,11 +41,11 @@ return {
                                         action = "edit ~/.local/share/nvim/project_nvim/project_history",
                                 },
                         },
-                        footer = {	
+                        footer = {
                                 "",
                                 "",
                                 "https://github.com/TSalmon3/nvim.git",
-                        }
-                }
-        }
+                        },
+                },
+        },
 }

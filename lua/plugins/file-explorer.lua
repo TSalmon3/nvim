@@ -3,9 +3,8 @@ return {
         version = "*",
         dependencies = {
                 "nvim-tree/nvim-web-devicons",
-        },    
+        },
         config = function()
-
                 -- disable netrw at the very start of your init.lua (strongly advised)
                 vim.g.loaded_netrw = 1
                 vim.g.loaded_netrwPlugin = 1
@@ -16,18 +15,19 @@ return {
                         update_cwd = true,
                         sync_root_with_cwd = true,
                         respect_buf_cwd = true,
-
                         update_focused_file = {
                                 enable = true,
-                                update_root = true
+                                update_root = true,
                         },
-
-                        git = {enable = false},
-
+                        git = { enable = false },
                         filters = {
-                                dotfiles = true
-                        }
+                                dotfiles = false,
+                        },
+                        actions = {
+                                open_file = {
+                                        quit_on_open = true,
+                                },
+                        },
                 })
         end,
 }
-

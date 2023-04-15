@@ -24,12 +24,16 @@ vim.keymap.set("n", "<a-l>", "<c-w>l", opts)
 -- Plugin Keymap
 --
 
+-- Terminal
+vim.keymap.set("n", "tt", ":ToggleTerm<cr>", opts)
+
 -- File explorer
 vim.keymap.set("n", "te", ":NvimTreeToggle<cr>", opts)
 
 -- Fuzzy Find
 vim.keymap.set("n", "<a-p>", ":Telescope find_files<cr>", opts)
 vim.keymap.set("n", "<a-f>", ":Telescope live_grep<cr>", opts)
+vim.keymap.set("n", "<a-m>", ":Telescope oldfiles<cr>", opts)
 
 -- Motion
 vim.keymap.set("n", "m", "", opts)
@@ -40,10 +44,16 @@ vim.keymap.set("n", "ml", ":HopLineStart<CR>", opts)
 vim.keymap.set("n", "mL", ":HopLine<CR>", opts)
 vim.keymap.set("n", "ma", ":HopAnywhere<CR>", opts)
 
+-- Startup view
+vim.keymap.set("n", "<a-s>", ":Dashboard<cr>", opts)
+
 --- LSP
 local lsp_enhance = true
 
 vim.keymap.set("n", "ta", ":SymbolsOutline<cr>", opts)
+vim.keymap.set("n", "tdq", ":TroubleToggle quickfix<cr>", opts)
+vim.keymap.set("n", "tdl", ":TroubleToggle loclist<cr>", opts)
+vim.keymap.set("n", "tdw", ":TroubleToggle workspace_diagnostics<cr>", opts)
 
 if lsp_enhance == false then
         -- See `:help vim.diagnostic.*` for documentation on any of the below functions
