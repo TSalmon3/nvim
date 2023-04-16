@@ -1,6 +1,9 @@
 -- 字体
 vim.opt.guifont = { "CaskaydiaCove Nerd Font Mono:h12" }
 
+-- 格式化
+vim.opt.fileencoding = "UTF-8"
+
 -- 行号
 vim.opt.relativenumber = true
 vim.opt.number = true
@@ -18,6 +21,7 @@ vim.opt.autoindent = true
 
 -- 光标行
 vim.opt.cursorline = true
+vim.opt.colorcolumn = "80"
 
 -- 启用鼠标
 vim.opt.mouse:append("a")
@@ -30,6 +34,8 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 -- 搜索
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 

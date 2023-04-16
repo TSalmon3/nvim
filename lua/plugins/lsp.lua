@@ -242,11 +242,9 @@ return {
                                         require("null-ls").builtins.formatting.prettier,
                                         require("null-ls").builtins.formatting.stylua,
                                         require("null-ls").builtins.formatting.clang_format.with({
+                                                filetypes = { "c", "cpp" },
                                                 extra_args = {
-                                                        -- "--style",
-                                                        -- "{IndentWidth:8}",
-                                                        string.format("-style=file:%s/.clang-format",
-                                                        vim.fn.expand("~/AppData/Local/nvim/style")),
+                                                        "-style={BasedOnStyle: LLVM, IndentWidth: 4}",
                                                 },
                                         }),
                                 },

@@ -57,36 +57,33 @@ local progress = function()
         return chars[index]
 end
 
-
 local spaces = function()
         return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
-
 return {
-        'nvim-lualine/lualine.nvim',
+        "nvim-lualine/lualine.nvim",
         enabled = true,
-        dependencise = { 'nvim-tree/nvim-web-devicons', lazy = true },
+        dependencise = { "nvim-tree/nvim-web-devicons", lazy = true },
         config = function()
                 --[[
 +-------------------------------------------------+
 | A | B | C                             X | Y | Z |
 +-------------------------------------------------+
 ]]
-                require('lualine').setup({
+                require("lualine").setup({
                         options = {
                                 icons_enabled = true,
                                 theme = "auto",
-                                component_separators = { left = "", right = "" },
-                                section_separators = { left = "", right = "" },
+                                component_separators = "|",
+                                section_separators = { left = "", right = "" },
                                 always_divide_middle = true,
                         },
                         sections = {
-
                                 lualine_a = { mode },
                                 lualine_b = { branch, diagnostics },
                                 lualine_c = {},
-                                lualine_x = { diff},
+                                lualine_x = { diff },
                                 -- lualine_x = {'encoding', 'fileformat', 'filetype'},
                                 lualine_y = { "encoding", fileformat, filetype },
                                 lualine_z = { location, "progress" },
@@ -100,5 +97,5 @@ return {
                                 lualine_z = {},
                         },
                 })
-        end
+        end,
 }
