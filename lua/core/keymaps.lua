@@ -20,12 +20,22 @@ vim.keymap.set("n", "<a-j>", "<c-w>j", opts)
 vim.keymap.set("n", "<a-k>", "<c-w>k", opts)
 vim.keymap.set("n", "<a-l>", "<c-w>l", opts)
 
+-- windows resize
+vim.keymap.set("n", "<c-h>", ":vertical resize -2<cr>", opts)
+vim.keymap.set("n", "<c-l>", ":vertical resize +2<cr>", opts)
+vim.keymap.set("n", "<c-k>", "resize -2<cr>", opts)
+vim.keymap.set("n", "<c-j>", "resize +2<cr>", opts)
 --
 -- Plugin Keymap
 --
 
 -- Terminal
 vim.keymap.set("n", "tt", ":ToggleTerm<cr>", opts)
+vim.keymap.set("t", "tt", ":ToggleTerm<cr>", opts)
+vim.keymap.set("t", "<a-j>", "<c-w>j", opts)
+vim.keymap.set("t", "<a-k>", "<c-w>k", opts)
+vim.keymap.set("t", "<a-h>", "<c-w>h", opts)
+vim.keymap.set("t", "<a-l>", "<c-w>l", opts)
 
 -- File explorer
 vim.keymap.set("n", "te", ":NvimTreeToggle<cr>", opts)
@@ -34,6 +44,8 @@ vim.keymap.set("n", "te", ":NvimTreeToggle<cr>", opts)
 vim.keymap.set("n", "<a-p>", ":Telescope find_files<cr>", opts)
 vim.keymap.set("n", "<a-f>", ":Telescope live_grep<cr>", opts)
 vim.keymap.set("n", "<a-m>", ":Telescope oldfiles<cr>", opts)
+vim.keymap.set("n", "<a-w>", ":Telescope projects<cr>", opts)
+vim.keymap.set("n", "<a-u>", ":Telescope undo<cr>", opts)
 
 -- Motion
 vim.keymap.set("n", "m", "", opts)
