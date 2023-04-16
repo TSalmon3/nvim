@@ -1,3 +1,6 @@
+-- 字体
+vim.opt.guifont = { "CaskaydiaCove Nerd Font Mono:h12" }
+
 -- 行号
 vim.opt.relativenumber = true
 vim.opt.number = true
@@ -12,7 +15,6 @@ vim.opt.tabstop = 8
 vim.opt.shiftwidth = 8
 vim.opt.expandtab = true
 vim.opt.autoindent = true
-
 
 -- 光标行
 vim.opt.cursorline = true
@@ -34,6 +36,3 @@ vim.opt.smartcase = true
 -- 外观
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
-
-
-vim.cmd[[set shell=powershell]]

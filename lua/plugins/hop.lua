@@ -1,10 +1,9 @@
 return {
-        'phaazon/hop.nvim',
-        branch = 'v2', -- optional but strongly recommended
-        config = function() 
+        "phaazon/hop.nvim",
+        branch = "v2", -- optional but strongly recommended
+        config = function()
                 require("hop").setup({
-                        keys = 'etovxqpdygfblzhckisuran' 
+                        keys = "etovxqpdygfblzhckisuran",
                 })
-        end
-
+        end,
 }
