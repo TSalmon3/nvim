@@ -243,16 +243,16 @@ return {
                                         require("null-ls").builtins.formatting.stylua,
                                         require("null-ls").builtins.formatting.clang_format.with({
                                                 extra_args = {
-                                                        "--style",
-                                                        "{IndentWidth:8}",
-                                                        -- string.format("-style=file:%s/.clang-format",
-                                                        -- vim.fn.expand("~/.config/nvim/style")),
+                                                        -- "--style",
+                                                        -- "{IndentWidth:8}",
+                                                        string.format("-style=file:%s/.clang-format",
+                                                        vim.fn.expand("~/AppData/Local/nvim/style")),
                                                 },
                                         }),
                                 },
-                                on_init = function(new_client, _)
-                                        new_client.offset_encoding = "utf-32"
-                                end,
+                                -- on_init = function(new_client, _)
+                                --         new_client.offset_encoding = "utf-8"
+                                -- end,
                                 on_attach = function(client, bufnr)
                                         if client.supports_method("textDocument/formatting") then
                                                 vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
