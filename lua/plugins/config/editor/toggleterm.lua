@@ -11,13 +11,9 @@ for option, value in pairs(powershell_options) do
 	vim.opt[option] = value
 end
 
-return {
-	"akinsho/toggleterm.nvim",
-	version = "*",
-	config = function()
-		require("toggleterm").setup({
-			autochdir = true,
-			close_on_exit = true, -- close the terminal window when the process exits,
-		})
-	end,
-}
+return function()
+	require("toggleterm").setup({
+		autochdir = true,
+		close_on_exit = true, -- close the terminal window when the process exits,
+	})
+end

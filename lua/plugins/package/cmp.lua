@@ -1,0 +1,65 @@
+local cmp = {}
+
+table.insert(cmp, {
+	"hrsh7th/nvim-cmp",
+	lazy = true,
+	event = "InsertEnter",
+	config = require("plugins.config.cmp.nvim-cmp"),
+	dependencies = {
+		-- "hrsh7th/vim-vsnip",
+		-- "hrsh7th/cmp-vsnip",
+		{
+			"L3MON4D3/LuaSnip",
+			dependencies = { "rafamadriz/friendly-snippets" },
+		},
+
+		{ "hrsh7th/cmp-nvim-lsp" },
+		{ "hrsh7th/cmp-buffer" },
+		{ "hrsh7th/cmp-buffer" },
+		{ "hrsh7th/cmp-path" },
+		{ "hrsh7th/cmp-cmdline" },
+
+		{
+			"onsails/lspkind.nvim",
+			config = require("plugins.config.cmp.lspkind"),
+		},
+	},
+})
+
+table.insert(cmp, {
+	"neovim/nvim-lspconfig",
+	lazy = true,
+	event = { "BufReadPost", "BufAdd", "BufNewFile" },
+	dependencies = {
+		{
+			"williamboman/mason.nvim",
+			build = ":MasonUpdate", -- :MasonUpdate updates registry contents
+			config = require("plugins.config.cmp.mason"),
+		},
+		{
+			"williamboman/mason-lspconfig.nvim",
+			config = require("plugins.config.cmp.mason-lspconfig"),
+		},
+		{
+			"glepnir/lspsaga.nvim",
+			config = require("plugins.config.cmp.lspsaga"),
+		},
+	},
+	-- config = require("plugins.config.cmp.nvim-lspconfig"),
+})
+
+table.insert(cmp, {
+	"jose-elias-alvarez/null-ls.nvim",
+	lazy = true,
+	event = { "BufReadPost" },
+	config = require("plugins.config.cmp.null-ls"),
+	dependencies = {
+		{ "nvim-lua/plenary.nvim" },
+		{
+			"jay-babu/mason-null-ls.nvim",
+			config = require("plugins.config.cmp.mason-null-ls"),
+		},
+	},
+})
+
+return cmp
