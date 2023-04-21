@@ -81,6 +81,13 @@ table.insert(editor, {
 	config = require("plugins.config.editor.gitsigns"),
 })
 
+table.insert(editor, {
+	"sindrets/diffview.nvim",
+	lazy = true,
+	cmd = { "DiffviewOpen", "DiffviewClose" },
+	dependencies = "nvim-lua/plenary.nvim",
+})
+
 -- move
 table.insert(editor, {
 	"phaazon/hop.nvim",
@@ -88,6 +95,12 @@ table.insert(editor, {
 	event = "BufReadPost",
 	branch = "v2", -- optional but strongly recommended
 	config = require("plugins.config.editor.hop"),
+})
+
+table.insert(editor, {
+	"romainl/vim-cool",
+	lazy = true,
+	event = { "CursorMoved", "InsertEnter" },
 })
 
 return editor

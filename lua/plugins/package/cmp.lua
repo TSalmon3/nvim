@@ -62,4 +62,17 @@ table.insert(cmp, {
 	},
 })
 
+table.insert(cmp, {
+	"zbirenbaum/copilot.lua",
+	cmd = "Copilot",
+	event = "InsertEnter",
+	config = require("plugins.config.cmp.copilot"),
+	dependencies = {
+		{
+			"zbirenbaum/copilot-cmp",
+			config = require("plugins.config.cmp.copilot-cmp"),
+		},
+	},
+})
+
 return cmp

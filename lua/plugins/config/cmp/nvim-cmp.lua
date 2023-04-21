@@ -19,6 +19,7 @@ return function()
 			end,
 		},
 		sources = cmp.config.sources({
+			{ name = "copilot" },
 			{ name = "nvim_lsp" },
 			-- For vsnip users.
 			-- { name = "vsnip" },
