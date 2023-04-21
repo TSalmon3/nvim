@@ -19,6 +19,7 @@ return function()
 		--
 		-- default: {}
 		symbol_map = {
+			Copilot = "",
 			Text = "",
 			Method = "",
 			Function = "",

@@ -19,9 +19,7 @@ return function()
 			separator = " ",
 			ignore_patterns = {},
 			hide_keyword = true,
-			show_file = true,
-			folder_level = 2,
-			respect_root = false,
+			show_file = false,
 			color_mode = true,
 		},
 		finder = {

@@ -74,8 +74,8 @@ vim.keymap.set("n", "ma", ":HopAnywhere<CR>", opts)
 vim.keymap.set("n", "<a-s>", ":Dashboard<cr>", opts)
 
 -- Diff
-vim.keymap.set("n", "td", ":DiffviewOpen<cr>", opts)
-vim.keymap.set("n", "txd", ":DiffviewClose<cr>", opts)
+vim.keymap.set("n", "<a-d>", ":DiffviewOpen<cr>", opts)
+vim.keymap.set("n", "<a-x>", ":DiffviewClose<cr>", opts)
 
 --- LSP
 local lsp_enhance = true

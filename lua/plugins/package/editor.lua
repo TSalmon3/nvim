@@ -1,5 +1,14 @@
 local editor = {}
 
+table.insert(editor, {
+	"glepnir/nerdicons.nvim",
+	enabled = false,
+	cmd = "NerdIcons",
+	config = function()
+		require("nerdicons").setup({})
+	end,
+})
+
 -- colorscheme
 table.insert(editor, {
 	"folke/tokyonight.nvim",
@@ -28,7 +37,7 @@ table.insert(editor, {
 	},
 	version = "*",
 	config = require("plugins.config.editor.nvim-tree"),
-	-- dependencies = { "nvim-tree/nvim-web-devicons" },
+	dependencies = { "nvim-tree/nvim-web-devicons" },
 })
 
 --- statusline
@@ -42,10 +51,11 @@ table.insert(editor, {
 --- bufferline
 table.insert(editor, {
 	"akinsho/bufferline.nvim",
-	lazy = true,
-	event = { "BufReadPost", "BufAdd", "BufNewFile" },
-	version = "v3.*",
+	-- lazy = true,
+	-- event = { "BufReadPost", "BufAdd", "BufNewFile" },
+	version = "*",
 	config = require("plugins.config.editor.bufferline"),
+        dependencies = {'nvim-tree/nvim-web-devicons'},
 })
 
 -- terminal

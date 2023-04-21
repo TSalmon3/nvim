@@ -1,6 +1,7 @@
 return function()
 	require("mason-lspconfig").setup({
 		ensure_installed = {
+			-- lsp server
 			"lua_ls",
 			"clangd",
 			"vimls",

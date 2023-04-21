@@ -21,7 +21,7 @@ table.insert(cmp, {
 
 		{
 			"onsails/lspkind.nvim",
-			config = require("plugins.config.cmp.lspkind"),
+			-- config = require("plugins.config.cmp.lspkind"),
 		},
 	},
 })
@@ -50,6 +50,7 @@ table.insert(cmp, {
 
 table.insert(cmp, {
 	"jose-elias-alvarez/null-ls.nvim",
+	enabled = true,
 	lazy = true,
 	event = { "BufReadPost" },
 	config = require("plugins.config.cmp.null-ls"),
@@ -65,7 +66,7 @@ table.insert(cmp, {
 table.insert(cmp, {
 	"zbirenbaum/copilot.lua",
 	cmd = "Copilot",
-	event = "InsertEnter",
+	build = ":Copilot auth",
 	config = require("plugins.config.cmp.copilot"),
 	dependencies = {
 		{
