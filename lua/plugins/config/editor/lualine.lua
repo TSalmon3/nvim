@@ -110,7 +110,6 @@ return function()
         },
         extensions = {
             'nvim-tree',
-            'symbols-outline',
         },
     })
 end

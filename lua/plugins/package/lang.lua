@@ -84,7 +84,9 @@ table.insert(lang, {
     'folke/todo-comments.nvim',
     lazy = true,
     event = { 'BufNewFile', 'BufReadPre' },
-    config = nil,
+    config = function()
+        require('todo-comments').setup({})
+    end,
     dependencies = 'nvim-lua/plenary.nvim',
 })
 
@@ -114,6 +116,16 @@ table.insert(lang, {
     lazy = true,
     cmd = { 'Format', 'FormatWrite' },
     config = require('plugins.config.lang.formatter'),
+})
+
+table.insert(lang, {
+    'iamcco/markdown-preview.nvim',
+    enabled = false,
+    lazy = true,
+    ft = 'markdown',
+    build = function()
+        vim.fn['mkdp#util#install']()
+    end,
 })
 
 return lang
