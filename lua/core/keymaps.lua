@@ -80,7 +80,7 @@ vim.keymap.set('n', '<a-s>', ':Dashboard<cr>', opts)
 
 -- Diff
 vim.keymap.set('n', '<a-d>', ':DiffviewOpen<cr>', opts)
-vim.keymap.set('n', '<a-x>', ':DiffviewClose<cr>', opts)
+vim.keymap.set('n', 'q', ':DiffviewClose<cr>', opts)
 
 --- LSP
 local lsp_enhance = true

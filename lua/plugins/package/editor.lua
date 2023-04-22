@@ -110,7 +110,8 @@ table.insert(editor, {
 table.insert(editor, {
     'romainl/vim-cool',
     lazy = true,
-    event = { 'CursorMoved', 'InsertEnter' },
+    event = 'CmdlineEnter',
+    config = require('plugins.config.editor.vim-cool'),
 })
 
 table.insert(editor, {
@@ -126,6 +127,13 @@ table.insert(editor, {
     lazy = true,
     event = 'VeryLazy',
     config = require('plugins.config.editor.nvim-notify'),
+})
+
+table.insert(editor, {
+    'mg979/vim-visual-multi',
+    lazy = true,
+    event = 'BufReadPost',
+    config = require('plugins.config.editor.vim-visual-multi'),
 })
 
 return editor

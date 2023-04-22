@@ -16,6 +16,9 @@ table.insert(lang, {
     dependencies = {
         { 'kana/vim-textobj-user' },
     },
+    config = function()
+        vim.cmd([[let g:vim_textobj_parameter_mapping = ',']])
+    end,
 })
 
 table.insert(lang, {
