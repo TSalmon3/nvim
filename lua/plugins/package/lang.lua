@@ -122,11 +122,21 @@ table.insert(lang, {
 })
 
 table.insert(lang, {
+    'dhruvasagar/vim-table-mode',
+    lazy = true,
+    ft = 'markdown',
+})
+
+table.insert(lang, {
     'iamcco/markdown-preview.nvim',
-    enabled = false,
     lazy = true,
     ft = 'markdown',
     build = function()
+        -- FIX: if install fail then do
+        -- $cd app
+        -- $cwd
+        -- $npm install
+        -- end
         vim.fn['mkdp#util#install']()
     end,
 })
