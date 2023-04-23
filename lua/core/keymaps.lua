@@ -30,6 +30,8 @@ vim.keymap.set('n', '<c-j>', 'resize +2<cr>', opts)
 --
 -- Plugin Keymap
 --
+-- markdown
+vim.keymap.set('n', '<f1>', ':MarkdownPreviewToggle<cr>', opts)
 
 -- Accelerated jk
 vim.keymap.set('n', 'j', '<Plug>(accelerated_jk_gj)', opts)
@@ -79,8 +81,8 @@ vim.keymap.set('n', 'ma', ':HopAnywhere<CR>', opts)
 vim.keymap.set('n', '<a-s>', ':Dashboard<cr>', opts)
 
 -- Diff
-vim.keymap.set('n', '<a-d>', ':DiffviewOpen<cr>', opts)
-vim.keymap.set('n', '<esc>', ':DiffviewClose<cr>', opts)
+vim.keymap.set('n', '<f2>', ':DiffviewOpen<cr>', opts)
+vim.keymap.set('n', '<f3>', ':DiffviewClose<cr>', opts)
 
 --- LSP
 local lsp_enhance = true

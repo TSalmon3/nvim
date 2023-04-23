@@ -23,6 +23,10 @@ table.insert(cmp, {
             'onsails/lspkind.nvim',
             -- config = require("plugins.config.cmp.lspkind"),
         },
+        {
+            'abecodes/tabout.nvim',
+            config = require('plugins.config.lang.tabout'),
+        },
     },
 })
 

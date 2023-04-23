@@ -70,11 +70,12 @@ table.insert(lang, {
     config = require('plugins.config.lang.surround'),
 })
 
-table.insert(lang, {
-    'abecodes/tabout.nvim',
-    enabled = false,
-    config = require('plugins.config.lang.tabout'),
-})
+-- table.insert(lang, {
+--     -- WARN: not effect
+--     'abecodes/tabout.nvim',
+--     enabled = true,
+--     config = require('plugins.config.lang.tabout'),
+-- })
 
 table.insert(lang, {
     'numToStr/Comment.nvim',
@@ -121,11 +122,11 @@ table.insert(lang, {
     config = require('plugins.config.lang.formatter'),
 })
 
-table.insert(lang, {
-    'dhruvasagar/vim-table-mode',
-    lazy = true,
-    ft = 'markdown',
-})
+-- table.insert(lang, {
+--     'dhruvasagar/vim-table-mode',
+--     lazy = true,
+--     ft = 'markdown',
+-- })
 
 table.insert(lang, {
     'iamcco/markdown-preview.nvim',
@@ -139,6 +140,10 @@ table.insert(lang, {
         -- end
         vim.fn['mkdp#util#install']()
     end,
+
+    dependencies = {
+        { 'dhruvasagar/vim-table-mode' },
+    },
 })
 
 return lang
