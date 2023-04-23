@@ -132,7 +132,7 @@ table.insert(lang, {
     lazy = true,
     ft = 'markdown',
     build = function()
-        -- FIX: if install fail then do
+        -- FIX: if install fail in windows then do
         -- $cd app
         -- $cwd
         -- $npm install
