@@ -67,6 +67,9 @@ vim.keymap.set('n', '<a-f>', ':Telescope live_grep<cr>', opts)
 vim.keymap.set('n', '<a-m>', ':Telescope oldfiles<cr>', opts)
 vim.keymap.set('n', '<a-w>', ':Telescope projects<cr>', opts)
 vim.keymap.set('n', '<a-u>', ':Telescope undo<cr>', opts)
+vim.keymap.set('n', '<a-n>', ':Telescope notify<cr>', opts)
+vim.keymap.set('n', '<a-b>', ':Telescope keymap<cr>', opts)
+-- vim.keymap.set('n ', '<a-l>', ':Telescope notify<cr>', opts)
 
 -- Motion
 vim.keymap.set('n', 'm', '', opts)
@@ -80,7 +83,23 @@ vim.keymap.set('n', 'ma', ':HopAnywhere<CR>', opts)
 -- Startup view
 vim.keymap.set('n', '<a-s>', ':Dashboard<cr>', opts)
 
--- Diff
+-- Git
+
+vim.keymap.set('n', ']g', '<cmd>Gitsigns next_hunk<cr>', opts)
+vim.keymap.set('n', '[g', '<cmd>Gitsigns prev_hunk<cr>', opts)
+vim.keymap.set('n', '<leader>hs', ':Gitsigns stage_hunk<CR>', opts)
+vim.keymap.set('v', '<leader>hs', ':Gitsigns stage_hunk<CR>', opts)
+vim.keymap.set('n', '<leader>hr', ':Gitsigns reset_hunk<CR>', opts)
+vim.keymap.set('v', '<leader>hr', ':Gitsigns reset_hunk<CR>', opts)
+vim.keymap.set('n', '<leader>hS', '<cmd>Gitsigns stage_buffer<CR>', opts)
+vim.keymap.set('n', '<leader>hu', '<cmd>Gitsigns undo_stage_hunk<CR>', opts)
+vim.keymap.set('n', '<leader>hR', '<cmd>Gitsigns reset_buffer<CR>', opts)
+vim.keymap.set('n', '<leader>hp', '<cmd>Gitsigns preview_hunk<CR>', opts)
+vim.keymap.set('n', '<leader>hb', '<cmd>lua require"gitsigns".blame_line{full=true}<CR>', opts)
+vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', opts)
+vim.keymap.set('n', '<leader>hd', '<cmd>Gitsigns diffthis<CR>', opts)
+vim.keymap.set('n', '<leader>hD', '<cmd>lua require"gitsigns".diffthis("~")<CR>', opts)
+
 vim.keymap.set('n', '<f2>', ':DiffviewOpen<cr>', opts)
 vim.keymap.set('n', '<f3>', ':DiffviewClose<cr>', opts)
 
@@ -98,38 +117,38 @@ if lsp_enhance == false then
     vim.keymap.set('n', 'gk', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
     vim.keymap.set('n', 'gj', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
     vim.keymap.set('n', 'gq', vim.diagnostic.setloclist)
---
---     -- Use LspAttach autocommand to only map the following keys
---     -- after the language server attaches to the current buffer
---     vim.api.nvim_create_autocmd('LspAttach', {
---         group = vim.api.nvim_create_augroup('UserLspConfig', {}),
---         callback = function(ev)
---             -- Enable completion triggered by <c-x><c-o>
---             vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
---
---             -- Buffer local mappings.
---             -- See `:help vim.lsp.*` for documentation on any of the below functions
---             local opts = { buffer = ev.buf }
---
---             vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
---             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
---             vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
---             vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
---             vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
---             -- vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
---             -- vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
---             -- vim.keymap.set('n', '<space>wl', function()
---             --         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
---             -- end, opts)
---             vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
---             vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
---             vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
---             vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
---             vim.keymap.set('n', '<space>f', function()
---                 vim.lsp.buf.format({ async = true })
---             end, opts)
---         end,
---     })
+    --
+    --     -- Use LspAttach autocommand to only map the following keys
+    --     -- after the language server attaches to the current buffer
+    --     vim.api.nvim_create_autocmd('LspAttach', {
+    --         group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+    --         callback = function(ev)
+    --             -- Enable completion triggered by <c-x><c-o>
+    --             vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+    --
+    --             -- Buffer local mappings.
+    --             -- See `:help vim.lsp.*` for documentation on any of the below functions
+    --             local opts = { buffer = ev.buf }
+    --
+    --             vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+    --             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    --             vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    --             vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+    --             vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+    --             -- vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
+    --             -- vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
+    --             -- vim.keymap.set('n', '<space>wl', function()
+    --             --         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+    --             -- end, opts)
+    --             vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
+    --             vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+    --             vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
+    --             vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+    --             vim.keymap.set('n', '<space>f', function()
+    --                 vim.lsp.buf.format({ async = true })
+    --             end, opts)
+    --         end,
+    --     })
 else
     vim.keymap.set('n', 'gp', '<cmd>Lspsaga show_line_diagnostics<CR>', opts)
     vim.keymap.set('n', 'gj', '<cmd>Lspsaga diagnostic_jump_next<cr>', opts)

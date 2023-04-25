@@ -56,6 +56,7 @@ table.insert(cmp, {
             'williamboman/mason-lspconfig.nvim',
             config = require('plugins.config.cmp.mason-lspconfig'),
         },
+
         {
             'glepnir/lspsaga.nvim',
             config = require('plugins.config.cmp.lspsaga'),

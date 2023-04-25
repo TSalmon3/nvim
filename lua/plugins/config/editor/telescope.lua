@@ -2,6 +2,7 @@ return function()
     local actions = require('telescope.actions')
     require('telescope').load_extension('projects')
     require('telescope').load_extension('undo')
+    require('telescope').load_extension('notify')
     require('telescope').setup({
         pickers = {
             find_files = {
@@ -14,6 +15,9 @@ return function()
                 previewer = false,
             },
             live_grep = {},
+            keymaps = {
+                theme = 'dropdown',
+            },
         },
         extension = {
             undo = {
@@ -33,22 +37,19 @@ return function()
             },
         },
         defaults = {
+            initial_mode = 'insert',
             prompt_prefix = ' ',
             selection_caret = ' ',
-            path_display = { 'smart' },
+            -- path_display = { 'smart' },
+            path_display = { 'absolute' },
+            layout_strategy = 'horizontal',
+            scroll_strategy = 'limit',
             layout_config = {
                 horizontal = {
-                    prompt_position = 'top',
-                    preview_width = 0.55,
-                    results_width = 0.8,
+                    preview_width = 0.5,
                 },
-                vertical = {
-                    mirror = false,
-                },
-                width = 0.87,
-                height = 0.80,
-                preview_cutoff = 120,
             },
+
             mappings = {
                 i = {
                     ['<C-n>'] = actions.cycle_history_next,

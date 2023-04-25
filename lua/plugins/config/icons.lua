@@ -15,6 +15,13 @@ icons = {
         Info = ' ',
         Other = ' ',
     },
+    log = {
+        DEBUG = '',
+        ERROR = '',
+        INFO = '',
+        TRACE = '✎',
+        WARN = '',
+    },
     git = {
         added = ' ',
         modified = ' ',

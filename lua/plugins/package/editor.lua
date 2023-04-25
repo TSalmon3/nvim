@@ -79,6 +79,10 @@ table.insert(editor, {
             config = require('plugins.config.editor.project'),
         },
         { 'debugloop/telescope-undo.nvim' },
+        {
+            'rcarriga/nvim-notify',
+            config = require('plugins.config.editor.nvim-notify'),
+        },
     },
     config = require('plugins.config.editor.telescope'),
 })
@@ -122,18 +126,19 @@ table.insert(editor, {
 })
 
 table.insert(editor, {
-    'rcarriga/nvim-notify',
-    enabled = false,
-    lazy = true,
-    event = 'VeryLazy',
-    config = require('plugins.config.editor.nvim-notify'),
-})
-
-table.insert(editor, {
     'mg979/vim-visual-multi',
     lazy = true,
     event = 'BufReadPost',
     config = require('plugins.config.editor.vim-visual-multi'),
+})
+
+table.insert(editor, {
+    'TimUntersberger/neogit',
+    enabled = true,
+    config = require('plugins.config.editor.neogit'),
+    dependencies = {
+        { 'nvim-lua/plenary.nvim' },
+    },
 })
 
 return editor
