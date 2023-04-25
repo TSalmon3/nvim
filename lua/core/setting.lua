@@ -1,8 +1,10 @@
 -- 字体
 vim.opt.guifont = { 'CaskaydiaCove Nerd Font Mono:h12' }
 
+-- 设置编码
+vim.opt.encoding = 'utf-8'
 -- 格式化
-vim.opt.fileencoding = 'UTF-8'
+vim.opt.fileencoding = 'utf-8'
 
 -- 行号
 vim.opt.relativenumber = true

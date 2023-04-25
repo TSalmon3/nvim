@@ -20,6 +20,10 @@ return function()
             c = {
                 require('plugins.config.lang.format.c').clang_format,
             },
+
+            markdown = {
+                require('plugins.config.lang.format.markdown').prettier,
+            },
         },
     })
 end

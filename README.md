@@ -1,6 +1,5 @@
 ## telescope
-
-rg
+   rg
 
 fd
 
@@ -9,3 +8,5 @@ fd
 gcc
 
 dsf
+
+

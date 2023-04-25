@@ -19,20 +19,13 @@ return function()
             end,
         },
         sources = cmp.config.sources({
-            { name = 'copilot' },
             { name = 'nvim_lsp' },
-            -- For vsnip users.
-            -- { name = "vsnip" },
-
-            -- For luasnip users.
             { name = 'luasnip' },
+            { name = 'copilot' },
+            { name = 'buffer' },
+            { name = 'path' },
+        }),
 
-            --For ultisnips users.
-            -- { name = 'ultisnips' },
-
-            -- -- For snippy users.
-            -- { name = 'snippy' },
-        }, { { name = 'buffer' }, { name = 'path' } }),
         -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
         cmp.setup.cmdline({ '/', '?' }, {
             mapping = cmp.mapping.preset.cmdline(),

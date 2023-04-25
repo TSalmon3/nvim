@@ -117,6 +117,7 @@ table.insert(lang, {
 
 table.insert(lang, {
     'mhartington/formatter.nvim',
+    enabled = true,
     lazy = true,
     cmd = { 'Format', 'FormatWrite' },
     config = require('plugins.config.lang.formatter'),
