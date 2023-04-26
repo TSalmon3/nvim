@@ -81,7 +81,10 @@ vim.keymap.set('n', 'mL', ':HopLine<CR>', opts)
 vim.keymap.set('n', 'ma', ':HopAnywhere<CR>', opts)
 
 -- Startup view
-vim.keymap.set('n', '<a-s>', ':Dashboard<cr>', opts)
+-- vim.keymap.set('n', '<a-s>', ':Dashboard<cr>', opts)
+vim.keymap.set('n', '<a-s>', ':Startify<cr>', opts)
+vim.keymap.set('n', '<leader>ss', ':SSave<cr>', opts)
+vim.keymap.set('n', '<leader>sc', ':SClose<cr>', opts)
 
 -- Git
 

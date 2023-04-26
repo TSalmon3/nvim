@@ -22,10 +22,18 @@ table.insert(editor, {
 --startup panel
 table.insert(editor, {
     'glepnir/dashboard-nvim',
+    enabled = false,
     lazy = true,
     event = 'VimEnter',
     config = require('plugins.config.editor.dashboard'),
     --dependencies = { { "nvim-tree/nvim-web-devicons" } },
+})
+
+table.insert(editor, {
+    'mhinz/vim-startify',
+    lazy = true,
+    event = 'VimEnter',
+    config = require('plugins.config.editor.vim-startify'),
 })
 
 --- explorer
