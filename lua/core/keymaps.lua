@@ -68,7 +68,7 @@ vim.keymap.set('n', '<a-m>', ':Telescope oldfiles<cr>', opts)
 vim.keymap.set('n', '<a-w>', ':Telescope projects<cr>', opts)
 vim.keymap.set('n', '<a-u>', ':Telescope undo<cr>', opts)
 vim.keymap.set('n', '<a-n>', ':Telescope notify<cr>', opts)
-vim.keymap.set('n', '<a-b>', ':Telescope keymap<cr>', opts)
+vim.keymap.set('n', '<a-b>', ':Telescope keymaps<cr>', opts)
 -- vim.keymap.set('n ', '<a-l>', ':Telescope notify<cr>', opts)
 
 -- Motion

@@ -18,5 +18,14 @@ return function()
             WARN = icons.log.WARN,
         },
     })
-    vim.notify = notify
+
+    -- BUG: multiple different client offset_encodings (between copilot,
+    -- nvim-lsp and null-ls)
+    vim.notify = function(msg, ...)
+        if msg:match('warning: multiple different client offset_encodings') then
+            return
+        end
+
+        notify(msg, ...)
+    end
 end
