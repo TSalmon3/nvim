@@ -54,5 +54,35 @@ return function()
 				quit_on_open = true,
 			},
 		},
+		renderer = {
+			icons = {
+				webdev_colors = true,
+				show = {
+					file = true,
+					folder = true,
+					folder_arrow = true,
+					git = false,
+				},
+				padding = " ",
+				symlink_arrow = "  ",
+				glyphs = {
+					default = "",
+					symlink = "",
+					bookmark = "",
+					folder = {
+						arrow_open = "",
+						arrow_closed = "",
+						-- arrow_open = "",
+						-- arrow_closed = "",
+						default = "",
+						open = "",
+						empty = "",
+						empty_open = "",
+						symlink = "",
+						symlink_open = "",
+					},
+				},
+			},
+		},
 	})
 end

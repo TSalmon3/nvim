@@ -97,7 +97,7 @@ return function()
             lualine_c = {},
             lualine_x = { diff },
             -- lualine_x = {'encoding', 'fileformat', 'filetype'},
-            lualine_y = { 'encoding', fileformat, filetype },
+            lualine_y = { 'encoding', fileformat, 'filetype' },
             lualine_z = { location, 'progress' },
         },
         inactive_sections = {
