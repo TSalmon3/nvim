@@ -19,6 +19,16 @@ table.insert(editor, {
     end,
 })
 
+table.insert(editor, {
+    'olimorris/onedarkpro.nvim',
+    lazy = false,
+    priority = 1000, -- Ensure it loads first
+    config = function()
+        -- vim.cmd([[colorscheme onedark]])
+        -- vim.cmd([[colorscheme onedark_vivid]])
+    end,
+})
+
 --startup panel
 table.insert(editor, {
     'glepnir/dashboard-nvim',
@@ -93,6 +103,14 @@ table.insert(editor, {
         },
     },
     config = require('plugins.config.editor.telescope'),
+})
+
+table.insert(editor, {
+    'tpope/vim-fugitive',
+    lazy = false,
+    dependencies = {
+        { 'junegunn/gv.vim' },
+    },
 })
 
 -- gitsigns

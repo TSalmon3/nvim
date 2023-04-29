@@ -87,7 +87,7 @@ vim.keymap.set('n', '<leader>ss', ':SSave<cr>', opts)
 vim.keymap.set('n', '<leader>sc', ':SClose<cr>', opts)
 
 -- Git
-
+vim.keymap.set('n', '<a-g>', ':Neogit<cr>', opts)
 vim.keymap.set('n', ']g', '<cmd>Gitsigns next_hunk<cr>', opts)
 vim.keymap.set('n', '[g', '<cmd>Gitsigns prev_hunk<cr>', opts)
 vim.keymap.set('n', '<leader>hs', ':Gitsigns stage_hunk<CR>', opts)
@@ -110,6 +110,7 @@ vim.keymap.set('n', '<f3>', ':DiffviewClose<cr>', opts)
 local lsp_enhance = true
 
 vim.keymap.set('n', 'ta', '<cmd>Lspsaga outline<cr>', opts)
+-- vim.keymap.set('n', 'ta', '<cmd>SymbolsOutline<cr>', opts)
 vim.keymap.set('n', 'tdq', ':TroubleToggle quickfix<cr>', opts)
 vim.keymap.set('n', 'tdl', ':TroubleToggle loclist<cr>', opts)
 vim.keymap.set('n', 'tdw', ':TroubleToggle workspace_diagnostics<cr>', opts)

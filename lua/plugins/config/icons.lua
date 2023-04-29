@@ -1,147 +1,3 @@
-local M = {}
-
-M.devicons = {
-    default_icon = {
-        icon = '',
-        name = 'Default',
-    },
-
-    c = {
-        icon = '',
-        name = 'c',
-    },
-
-    css = {
-        icon = '',
-        name = 'css',
-    },
-
-    deb = {
-        icon = '',
-        name = 'deb',
-    },
-
-    Dockerfile = {
-        icon = '',
-        name = 'Dockerfile',
-    },
-
-    html = {
-        icon = '',
-        name = 'html',
-    },
-
-    jpeg = {
-        icon = '',
-        name = 'jpeg',
-    },
-
-    jpg = {
-        icon = '',
-        name = 'jpg',
-    },
-
-    js = {
-        icon = '',
-        name = 'js',
-    },
-
-    kt = {
-        icon = '󱈙',
-        name = 'kt',
-    },
-
-    lock = {
-        icon = '',
-        name = 'lock',
-    },
-
-    lua = {
-        icon = '',
-        name = 'lua',
-    },
-
-    mp3 = {
-        icon = '',
-        name = 'mp3',
-    },
-
-    mp4 = {
-        icon = '',
-        name = 'mp4',
-    },
-
-    out = {
-        icon = '',
-        name = 'out',
-    },
-
-    png = {
-        icon = '',
-        name = 'png',
-    },
-
-    py = {
-        icon = '',
-        name = 'py',
-    },
-
-    ['robots.txt'] = {
-        icon = 'ﮧ',
-        name = 'robots',
-    },
-
-    toml = {
-        icon = '',
-        name = 'toml',
-    },
-
-    ts = {
-        icon = 'ﯤ',
-        name = 'ts',
-    },
-
-    ttf = {
-        icon = '',
-        name = 'TrueTypeFont',
-    },
-
-    rb = {
-        icon = '',
-        name = 'rb',
-    },
-
-    rpm = {
-        icon = '',
-        name = 'rpm',
-    },
-
-    vue = {
-        icon = '﵂',
-        name = 'vue',
-    },
-
-    woff = {
-        icon = '',
-        name = 'WebOpenFontFormat',
-    },
-
-    woff2 = {
-        icon = '',
-        name = 'WebOpenFontFormat2',
-    },
-
-    xz = {
-        icon = '',
-        name = 'xz',
-    },
-
-    zip = {
-        icon = '',
-        name = 'zip',
-    },
-}
-
 local icons = {}
 
 icons = {
@@ -167,60 +23,61 @@ icons = {
         branch = '',
     },
 
-    kind = {
+    cmp = {
 
-        Namespace = '',
+        -- copilot source
+        Copilot = '',
+        -- snip source
+        -- Snippet = '',
+        Snippet = '',
+
+        -- misc
         Text = '',
-        Method = '',
-        Function = '',
-        -- Function = "",
-        Constructor = '',
-        Field = 'ﰠ',
-        Variable = '',
-        Class = 'ﴯ',
-        Interface = '',
-        Module = '',
-        Property = 'ﰠ',
         Unit = '塞',
         Value = '',
-        Enum = '',
-        Keyword = '',
-        Snippet = '',
         Color = '',
-        File = '',
         Reference = '',
         Folder = '',
-        EnumMember = '',
+    },
+
+    kind = {
+
+        -- Copilot = '',
+        -- Snippet = '',
+
+        File = '',
+        Module = '',
+        Namespace = '',
+        Package = '',
+        Class = 'ﴯ',
+        Method = '',
+        Property = 'ﰠ',
+        Field = 'ﰠ',
+        Constructor = '',
+        Enum = '',
+        Interface = '',
+        Function = '',
+        -- Function = "",
+        Variable = '',
         Constant = '',
+        String = '',
+        Number = '',
+        Boolean = '',
+        Array = '[]',
+        Object = '',
+        Keyword = '',
+        Null = 'ﳠ',
+        EnumMember = '',
         Struct = 'פּ',
         Event = '',
         Operator = '',
         TypeParameter = '',
-        Table = '',
-        Object = '',
-        Tag = '',
-        Array = '[]',
-        Boolean = '',
-        Number = '',
-        Null = 'ﳠ',
-        String = '',
-        Calendar = '',
-        Watch = '',
-        Package = '',
-        Copilot = '',
     },
 
     statuline = {
         ComponentSep = '|',
         SectionLeftSep = '',
         SectionRightSep = '',
-    },
-
-    misc = {
-        project = '  ',
-        keyboard = '  ',
-        recent = '  ',
-        setting = '  ',
     },
 }
 

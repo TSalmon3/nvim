@@ -147,4 +147,11 @@ table.insert(lang, {
     },
 })
 
+table.insert(lang, {
+    'simrat39/symbols-outline.nvim',
+    lazy = true,
+    cmd = 'SymbolsOutline',
+    config = require('plugins.config.lang.symbols-outline'),
+})
+
 return lang

@@ -90,6 +90,7 @@ return function()
                 right = icons.statuline.SectionRightSep,
             },
             always_divide_middle = true,
+            globalstatus = true,
         },
         sections = {
             lualine_a = { mode },
@@ -109,7 +110,7 @@ return function()
             lualine_z = {},
         },
         extensions = {
-            'nvim-tree',
+            -- 'nvim-tree',
         },
     })
 end
