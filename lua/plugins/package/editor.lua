@@ -48,6 +48,11 @@ table.insert(editor, {
 
 --- explorer
 table.insert(editor, {
+    'justinmk/vim-dirvish',
+    lazy = false,
+})
+
+table.insert(editor, {
     'nvim-tree/nvim-tree.lua',
     lazy = true,
     cmd = {

@@ -21,9 +21,13 @@ local diff = {
     'diff',
     colored = false,
     symbols = {
-        added = icons.git.added,
-        modified = icons.git.modified,
-        removed = icons.git.removed,
+        -- added = icons.git.added,
+        -- modified = icons.git.modified,
+        -- removed = icons.git.removed,
+
+        added = '+',
+        modified = '~',
+        removed = '-',
     },
     cond = hide_in_width,
 }
@@ -94,9 +98,9 @@ return function()
         },
         sections = {
             lualine_a = { mode },
-            lualine_b = { branch, diagnostics },
+            lualine_b = { branch, diff },
             lualine_c = {},
-            lualine_x = { diff },
+            lualine_x = { diagnostics },
             -- lualine_x = {'encoding', 'fileformat', 'filetype'},
             lualine_y = { 'encoding', fileformat, 'filetype' },
             lualine_z = { location, 'progress' },
@@ -104,8 +108,8 @@ return function()
         inactive_sections = {
             lualine_a = {},
             lualine_b = {},
-            lualine_c = { 'filename' },
-            lualine_x = { 'location' },
+            lualine_c = {},
+            lualine_x = {},
             lualine_y = {},
             lualine_z = {},
         },
