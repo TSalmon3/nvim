@@ -15,7 +15,7 @@ table.insert(editor, {
     lazy = false,
     priority = 1000,
     config = function()
-        vim.cmd([[colorscheme tokyonight]])
+        -- vim.cmd([[colorscheme tokyonight]])
     end,
 })
 
@@ -26,6 +26,14 @@ table.insert(editor, {
     config = function()
         -- vim.cmd([[colorscheme onedark]])
         -- vim.cmd([[colorscheme onedark_vivid]])
+    end,
+})
+
+table.insert(editor, {
+    'ellisonleao/gruvbox.nvim',
+    priority = 1000,
+    config = function()
+        vim.cmd([[colorscheme gruvbox]])
     end,
 })
 
