@@ -114,6 +114,9 @@ table.insert(editor, {
             'rcarriga/nvim-notify',
             config = require('plugins.config.editor.nvim-notify'),
         },
+        {
+            'stevearc/dressing.nvim',
+        },
     },
     config = require('plugins.config.editor.telescope'),
 })
@@ -178,6 +181,16 @@ table.insert(editor, {
     dependencies = {
         { 'nvim-lua/plenary.nvim' },
     },
+})
+
+table.insert(editor, {
+    'junegunn/vim-easy-align',
+    config = function()
+        vim.cmd([[
+        xmap ga <Plug>(EasyAlign)
+        nmap ga <Plug>(EasyAlign)
+        ]])
+    end,
 })
 
 return editor

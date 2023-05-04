@@ -1,6 +1,12 @@
 local cmp = {}
 
 table.insert(cmp, {
+    'github/copilot.vim',
+    lazy = false,
+    event = 'InsertEnter',
+})
+
+table.insert(cmp, {
     'hrsh7th/nvim-cmp',
     lazy = true,
     event = 'InsertEnter',
@@ -22,6 +28,8 @@ table.insert(cmp, {
 
         {
             'zbirenbaum/copilot-cmp',
+            branch = 'formatting-fixes',
+            enabled = true,
             config = require('plugins.config.cmp.copilot-cmp'),
             dependencies = {
                 {
@@ -95,14 +103,17 @@ table.insert(cmp, {
     lazy = true,
     ft = 'c',
     dependencies = {
-        'ludovicchabant/vim-gutentags',
+        {
+            'skywind3000/vim-preview',
+            config = function()
+                vim.cmd([[
+                autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+                autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
+                ]])
+            end,
+        },
     },
     config = function()
-        vim.g.gutentags_modules = { 'cscope_maps' } -- This is required. Other config is optional
-        vim.g.gutentags_cscope_build_inverted_index_maps = 1
-        vim.g.gutentags_cache_dir = vim.fn.expand('~/.cache/.tags')
-        vim.g.gutentags_file_list_command = 'fd -e c -e h'
-        -- vim.g.gutentags_trace = 1
         require('cscope_maps').setup({})
     end,
 })

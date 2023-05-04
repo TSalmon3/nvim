@@ -3,10 +3,12 @@ local icons = require('plugins.config.icons')
 local diagnostics = {
     'diagnostics',
     sources = { 'nvim_diagnostic' },
-    sections = { 'error', 'warn' },
+    sections = { 'error', 'warn', 'hint' },
     symbols = {
         error = icons.diagnostics.Error,
         warn = icons.diagnostics.Warn,
+        info = icons.diagnostics.Info,
+        hint = icons.diagnostics.Hint,
     },
     colored = false,
     update_in_insert = false,
