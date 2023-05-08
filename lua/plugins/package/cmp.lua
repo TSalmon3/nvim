@@ -69,6 +69,10 @@ table.insert(cmp, {
         {
             'ray-x/lsp_signature.nvim',
         },
+        {
+            'liuchengxu/vista.vim',
+            config = require('plugins.config.cmp.vista'),
+        },
     },
     -- config = require("plugins.config.cmp.nvim-lspconfig"),
 })

@@ -109,7 +109,8 @@ vim.keymap.set('n', '<f3>', ':DiffviewClose<cr>', opts)
 --- LSP
 local lsp_enhance = true
 
-vim.keymap.set('n', 'ta', '<cmd>Lspsaga outline<cr>', opts)
+-- vim.keymap.set('n', 'ta', '<cmd>Lspsaga outline<cr>', opts)
+vim.keymap.set('n', 'ta', ':Vista!!<cr>', opts)
 -- vim.keymap.set('n', 'ta', '<cmd>SymbolsOutline<cr>', opts)
 vim.keymap.set('n', 'tdq', ':TroubleToggle quickfix<cr>', opts)
 vim.keymap.set('n', 'tdl', ':TroubleToggle loclist<cr>', opts)

@@ -15,7 +15,7 @@ table.insert(editor, {
     lazy = false,
     priority = 1000,
     config = function()
-        -- vim.cmd([[colorscheme tokyonight]])
+        vim.cmd([[colorscheme tokyonight]])
     end,
 })
 
@@ -33,7 +33,7 @@ table.insert(editor, {
     'ellisonleao/gruvbox.nvim',
     priority = 1000,
     config = function()
-        vim.cmd([[colorscheme gruvbox]])
+        -- vim.cmd([[colorscheme gruvbox]])
     end,
 })
 
@@ -185,11 +185,21 @@ table.insert(editor, {
 
 table.insert(editor, {
     'junegunn/vim-easy-align',
+    enabled = false,
     config = function()
         vim.cmd([[
         xmap ga <Plug>(EasyAlign)
         nmap ga <Plug>(EasyAlign)
         ]])
+    end,
+})
+
+table.insert(editor, {
+    'norcalli/nvim-colorizer.lua',
+    lazy = true,
+    event = 'BufReadPost',
+    config = function()
+        require('colorizer').setup()
     end,
 })
 
