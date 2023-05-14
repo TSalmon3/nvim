@@ -43,10 +43,11 @@ return function()
         git = { enable = false },
         filters = {
             dotfiles = true,
-            custom = { '.git' },
+            -- custom = { '.git' },
             exclude = {
                 '.clang-format',
                 '.stylua.toml',
+                '.gitignore',
             },
         },
         actions = {

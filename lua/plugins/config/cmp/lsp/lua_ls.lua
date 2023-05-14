@@ -14,6 +14,8 @@ local on_attach = function(client, bufnr)
             border = 'rounded',
         },
     })
+    -- winbar lsp
+    require('nvim-navic').attach(client, bufnr)
 end
 
 return {

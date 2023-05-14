@@ -5,7 +5,7 @@ function M.clang_format()
         exe = 'clang-format',
         args = {
             '--assume-filename=' .. vim.api.nvim_buf_get_name(0),
-            '-style="{BasedOnStyle: google, IndentWidth: 8}"',
+            '-style="{ BasedOnStyle: google, IndentWidth: 8, ColumnLimit: 80}"',
         },
         cwd = vim.fn.expand('%:p:h'),
         stdin = true,

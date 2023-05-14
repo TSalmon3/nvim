@@ -14,10 +14,13 @@ local on_attach = function(client, bufnr)
             border = 'rounded',
         },
     })
+    -- winbar lsp
+    require('nvim-navic').attach(client, bufnr)
 end
 
 return {
-    cmd = { 'clangd' },
+    -- INFO: cmp item not align: '--header-insertion-decorators=false'
+    cmd = { 'clangd', '--header-insertion-decorators=false' },
     filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto' },
     single_file_support = true,
     on_attach = on_attach,

@@ -17,24 +17,11 @@ table.insert(editor, {
     config = function()
         vim.cmd([[colorscheme tokyonight]])
     end,
-})
-
-table.insert(editor, {
-    'olimorris/onedarkpro.nvim',
-    lazy = false,
-    priority = 1000, -- Ensure it loads first
-    config = function()
-        -- vim.cmd([[colorscheme onedark]])
-        -- vim.cmd([[colorscheme onedark_vivid]])
-    end,
-})
-
-table.insert(editor, {
-    'ellisonleao/gruvbox.nvim',
-    priority = 1000,
-    config = function()
-        -- vim.cmd([[colorscheme gruvbox]])
-    end,
+    dependencies = {
+        { 'olimorris/onedarkpro.nvim' },
+        { 'ellisonleao/gruvbox.nvim' },
+        { 'rafamadriz/neon' },
+    },
 })
 
 --startup panel
@@ -185,7 +172,7 @@ table.insert(editor, {
 
 table.insert(editor, {
     'junegunn/vim-easy-align',
-    enabled = false,
+    enabled = true,
     config = function()
         vim.cmd([[
         xmap ga <Plug>(EasyAlign)
@@ -200,6 +187,15 @@ table.insert(editor, {
     event = 'BufReadPost',
     config = function()
         require('colorizer').setup()
+    end,
+})
+
+table.insert(editor, {
+    'm4xshen/smartcolumn.nvim',
+    lazy = true,
+    event = 'VeryLazy',
+    config = function()
+        require('smartcolumn').setup()
     end,
 })
 

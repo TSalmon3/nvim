@@ -73,6 +73,10 @@ table.insert(cmp, {
             'liuchengxu/vista.vim',
             config = require('plugins.config.cmp.vista'),
         },
+        {
+            'SmiteshP/nvim-navic',
+            config = require('plugins.config.cmp.navic'),
+        },
     },
     -- config = require("plugins.config.cmp.nvim-lspconfig"),
 })
@@ -92,15 +96,32 @@ table.insert(cmp, {
     },
 })
 
--- table.insert(cmp, {
---     'ludovicchabant/vim-gutentags',
---     lazy = true,
---     ft = 'c',
---     dependencies = {
---         'skywind3000/gutentags_plus',
---     },
---     config = require('plugins.config.cmp.vim-gutentags'),
--- })
+table.insert(cmp, {
+    'dhananjaylatkar/vim-gutentags',
+    lazy = true,
+    ft = 'c',
+    dependencies = {
+        'dhananjaylatkar/cscope_maps.nvim',
+        -- 'skywind3000/gutentags_plus',
+    },
+    config = function()
+        vim.cmd([[set tags=./tags;,tags]])
+        vim.g.gutentags_project_root = { '.root', '.git', '.project' }
+        vim.g.gutentags_modules = { 'cscope_maps', 'ctags' }
+        vim.g.gutentags_cache_dir = vim.fn.expand('~/.cache')
+        vim.g.gutentags_ctags_tagfile = '.tags'
+
+        vim.g.gutentags_ctags_extra_args = {
+            '--fields=+niazS',
+            '--extra=+q',
+            '--c++-kinds=+px',
+            '--c-kinds=+px',
+            '--output-format=e-ctags',
+        }
+        vim.g.gutentags_generate_on_write = 1
+    end,
+    -- config = require('plugins.config.cmp.vim-gutentags'),
+})
 
 table.insert(cmp, {
     'dhananjaylatkar/cscope_maps.nvim',
@@ -118,7 +139,17 @@ table.insert(cmp, {
         },
     },
     config = function()
-        require('cscope_maps').setup({})
+        require('cscope_maps').setup({
+            cscope = {
+                db_file = './cscope.out', -- location of cscope db file
+                use_telescope = false, -- true will show results in telescope picker
+                db_build_cmd = { -- cmd used for :Cscope build
+                    exec = 'cscope',
+                    -- args = { '-bqkv' },
+                    args = { '-Rbk' },
+                },
+            },
+        })
     end,
 })
 

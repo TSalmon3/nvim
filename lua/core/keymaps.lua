@@ -50,7 +50,7 @@ vim.keymap.set('n', '<leader>9', ':Bdelete! 9<cr>', opts)
 vim.keymap.set('n', '<leader>0', ':Bdelete! 0<cr>', opts)
 
 -- Terminal
-vim.keymap.set('n', 'tt', ':ToggleTerm<cr>', opts)
+vim.keymap.set('n', 'tt', ':ToggleTerm direction=tab<cr>', opts)
 vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts)
 vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
 vim.keymap.set('t', '<a-j>', [[<Cmd>wincmd j<CR>]], opts)
