@@ -103,6 +103,7 @@ table.insert(editor, {
         },
         {
             'stevearc/dressing.nvim',
+            enabled = false,
         },
     },
     config = require('plugins.config.editor.telescope'),

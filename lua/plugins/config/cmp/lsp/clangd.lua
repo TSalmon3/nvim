@@ -15,7 +15,7 @@ local on_attach = function(client, bufnr)
         },
     })
     -- winbar lsp
-    require('nvim-navic').attach(client, bufnr)
+    -- require('nvim-navic').attach(client, bufnr)
 end
 
 return {

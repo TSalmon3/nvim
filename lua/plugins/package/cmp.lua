@@ -98,6 +98,7 @@ table.insert(cmp, {
 
 table.insert(cmp, {
     'dhananjaylatkar/vim-gutentags',
+    enabled = false,
     lazy = true,
     ft = 'c',
     dependencies = {

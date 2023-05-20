@@ -4,7 +4,7 @@ return function()
     require('nvim-navic').setup({
         icons = icons.kind,
         lsp = {
-            auto_attach = false,
+            auto_attach = true,
             preference = nil,
         },
         highlight = true,
