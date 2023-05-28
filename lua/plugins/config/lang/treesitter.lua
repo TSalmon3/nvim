@@ -6,6 +6,7 @@ return function()
             'lua',
             'vim',
             'vimdoc',
+            'make',
             'markdown',
             'markdown_inline',
         },

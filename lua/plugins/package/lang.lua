@@ -123,30 +123,6 @@ table.insert(lang, {
     config = require('plugins.config.lang.formatter'),
 })
 
--- table.insert(lang, {
---     'dhruvasagar/vim-table-mode',
---     lazy = true,
---     ft = 'markdown',
--- })
-
-table.insert(lang, {
-    'iamcco/markdown-preview.nvim',
-    lazy = true,
-    ft = 'markdown',
-    build = function()
-        -- FIX: if install fail in windows then do
-        -- $cd app
-        -- $cwd
-        -- $npm install
-        -- end
-        vim.fn['mkdp#util#install']()
-    end,
-
-    dependencies = {
-        { 'dhruvasagar/vim-table-mode' },
-    },
-})
-
 table.insert(lang, {
     'simrat39/symbols-outline.nvim',
     lazy = true,

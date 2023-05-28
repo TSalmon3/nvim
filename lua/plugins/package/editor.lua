@@ -200,4 +200,50 @@ table.insert(editor, {
     end,
 })
 
+table.insert(editor, {
+    'ellisonleao/glow.nvim',
+    lazy = true,
+    cmd = 'Glow',
+    config = function()
+        require('glow').setup({
+            style = 'dark',
+        })
+    end,
+})
+
+table.insert(editor, {
+    'jakewvincent/mkdnflow.nvim',
+    rocks = 'luautf8',
+    lazy = true,
+    ft = 'markdown',
+    config = require('plugins.config.editor.mkdnflow'),
+
+    dependencies = {
+        {
+            'ellisonleao/glow.nvim',
+            enabled = false,
+            config = function()
+                require('glow').setup({
+                    style = 'dark',
+                })
+            end,
+        },
+
+        {
+            'iamcco/markdown-preview.nvim',
+            enabled = true,
+            build = function()
+                -- FIX: if install fail in windows then do
+                -- $cd app
+                -- $cwd
+                -- $npm install
+                -- end
+                vim.fn['mkdp#util#install']()
+            end,
+        },
+
+        { 'dhruvasagar/vim-table-mode' },
+    },
+})
+
 return editor

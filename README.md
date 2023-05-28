@@ -1,5 +1,5 @@
 ## telescope
-   rg
+rg
 
 fd
 
