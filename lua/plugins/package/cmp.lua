@@ -29,7 +29,7 @@ table.insert(cmp, {
         {
             'zbirenbaum/copilot-cmp',
             branch = 'formatting-fixes',
-            enabled = true,
+            enabled = false,
             config = require('plugins.config.cmp.copilot-cmp'),
             dependencies = {
                 {
@@ -38,6 +38,11 @@ table.insert(cmp, {
                     config = require('plugins.config.cmp.copilot'),
                 },
             },
+        },
+        {
+            'Exafunction/codeium.vim',
+            event = 'BufEnter',
+            enabled = true,
         },
 
         {
