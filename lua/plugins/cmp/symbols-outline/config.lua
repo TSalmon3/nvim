@@ -1,0 +1,67 @@
+local icons = require('core.icons')
+
+local opts = {
+    highlight_hovered_item = true,
+    show_guides = true,
+    auto_preview = false,
+    position = 'right',
+    relative_width = true,
+    width = 25,
+    auto_close = true,
+    show_numbers = false,
+    show_symbol_details = true,
+    autofold_depth = nil,
+    auto_unfold_hover = true,
+    fold_markers = { icons.ui.ArrowClosed, icons.ui.ArrowOpen },
+    wrap = false,
+    keymaps = { -- These keymaps can be a string or a table for multiple keys
+        close = { '<Esc>', 'q' },
+        goto_location = '<Cr>',
+        focus_location = 'o',
+        hover_symbol = 'h',
+        toggle_preview = 'p',
+        rename_symbol = 'r',
+        code_actions = 'a',
+        fold = 'c',
+        unfold = 'o',
+        fold_all = 'W',
+        unfold_all = 'E',
+        fold_reset = 'R',
+    },
+    symbols = {
+        -- Kind
+        Class = { icon = icons.kind.Class, hl = 'LspKindClass' },
+        Constant = { icon = icons.kind.Constant, hl = 'LspKindConstant' },
+        Constructor = { icon = icons.kind.Constructor, hl = 'LspKindConstructor' },
+        Component = { icon = icons.kind.Snippet, hl = 'LspKindSnippet' },
+        Enum = { icon = icons.kind.Enum, hl = 'LspKindEnum' },
+        EnumMember = { icon = icons.kind.EnumMember, hl = 'LspKindEnumMember' },
+        Event = { icon = icons.kind.Event, hl = 'LspKindEvent' },
+        Field = { icon = icons.kind.Field, hl = 'LspKindField' },
+        File = { icon = icons.kind.File, hl = 'LspKindFile' },
+        Fragment = { icon = icons.kind.Fragment, hl = 'LspKindKey' },
+        Function = { icon = icons.kind.Function, hl = 'LspKindFunction' },
+        Interface = { icon = icons.kind.Interface, hl = 'LspKindInterface' },
+        Key = { icon = icons.kind.Keyword, hl = 'LspKindKey' },
+        Method = { icon = icons.kind.Method, hl = 'LspKindMethod' },
+        Module = { icon = icons.kind.Module, hl = 'LspKindModule' },
+        Namespace = { icon = icons.kind.Namespace, hl = 'LspKindNamespace' },
+        Number = { icon = icons.kind.Number, hl = 'LspKindNumber' },
+        Operator = { icon = icons.kind.Operator, hl = 'LspKindOperator' },
+        Package = { icon = icons.kind.Package, hl = 'LspKindPackage' },
+        Property = { icon = icons.kind.Property, hl = 'LspKindProperty' },
+        Struct = { icon = icons.kind.Struct, hl = 'LspKindStruct' },
+        TypeParameter = { icon = icons.kind.TypeParameter, hl = 'LspKindTypeParameter' },
+        Variable = { icon = icons.kind.Variable, hl = 'LspKindVariable' },
+        -- Type
+        Array = { icon = icons.type.Array, hl = 'LspKindArray' },
+        Boolean = { icon = icons.type.Boolean, hl = 'LspKindBoolean' },
+        Null = { icon = icons.type.Null, hl = 'LspKindNull' },
+        Object = { icon = icons.type.Object, hl = 'LspKindObject' },
+        String = { icon = icons.type.String, hl = 'LspKindString' },
+    },
+}
+
+return function()
+    require('symbols-outline').setup(opts)
+end
