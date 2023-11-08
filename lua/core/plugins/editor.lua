@@ -6,12 +6,13 @@ table.insert(editor, {
     lazy = false,
     priority = 1000,
     config = function()
-        vim.cmd([[colorscheme tokyonight]])
+        vim.cmd([[colorscheme nord]])
     end,
     dependencies = {
         { 'olimorris/onedarkpro.nvim' },
         { 'ellisonleao/gruvbox.nvim' },
         { 'rafamadriz/neon' },
+        { 'shaunsingh/nord.nvim' },
     },
 })
 

@@ -3,9 +3,10 @@ return function()
         ensure_installed = {
             -- lsp server
             'lua_ls',
-            -- 'clangd',
+            'clangd',
             -- 'vimls',
             'pylsp',
+            'cmake',
         },
     })
 
@@ -27,6 +28,9 @@ return function()
         end,
         ['pylsp'] = function()
             lspconfig.pylsp.setup(require('plugins.cmp.mason-lspconfig.lsp.pylsp'))
+        end,
+        ['cmake'] = function()
+            lspconfig.cmake.setup(require('plugins.cmp.mason-lspconfig.lsp.cmake'))
         end,
     })
 end

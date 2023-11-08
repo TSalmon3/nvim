@@ -93,6 +93,13 @@ table.insert(text, {
     lazy = true,
     event = 'BufReadPost',
     config = require('plugins.text.vim-visual-multi.config'),
+
+    dependencies = {
+        'kevinhwang91/nvim-hlslens',
+        lazy = true,
+        config = require('plugins.text.nvim-hlslens.config'),
+        keys = require('plugins.text.nvim-hlslens.keys'),
+    },
 })
 
 table.insert(text, {

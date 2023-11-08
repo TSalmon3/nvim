@@ -9,7 +9,8 @@ vim.keymap.set('n', '<leader>sv', ':source $MYVIMRC<cr>', opts)
 
 -- mode switch
 vim.keymap.set('i', 'jk', '<esc>', opts)
-vim.keymap.set('v', 'jk', '<esc>', opts)
+vim.keymap.set('v', 'q', '<esc>', opts)
+-- vim.keymap.set('v', 'jk', '<esc>', opts)
 
 -- window split
 vim.keymap.set('n', 'sv', '<c-w>v', opts)
